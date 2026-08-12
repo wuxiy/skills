@@ -1,2 +1,54 @@
 # cywu-skills
-技能库
+
+Claude Code 技能库 / A skills library for [Claude Code](https://claude.ai/code).
+
+## 包含的技能 / Included Skills
+
+| Skill | 说明 |
+|-------|------|
+| **cywu-code-refactor** | 需求开发完成后的 review + 重构。两种模式：`full`（审查刚完成功能的重复逻辑 / 设计 / UI 一致性 / 性能后重构）与 `cleanup`（复盘几轮补丁式修改，收敛成最优解）。守住三条底线：行为保持、步步验证、小步可退。 |
+| **skill-creator** | 技能创作与评测工具，vendored 自 [anthropics/skills](https://github.com/anthropics/skills)（MIT）。 |
+
+## 安装 / Install
+
+**方式一：作为插件安装整个技能库**（推荐）
+
+在 Claude Code 中：
+
+```
+/plugin marketplace add wuxiy/cywu-skills
+/plugin install cywu-skills
+```
+
+**方式二：单独安装某个技能**
+
+把 `skills/<skill-name>/` 目录复制到你的项目 `.claude/skills/` 或用户级 `~/.claude/skills/` 即可。
+
+## 评测技能 / Evaluating Skills
+
+带 `evals/` 的技能附带测试用例和 fixture 项目。需要 git 历史的 fixture 被忽略，用脚本再生：
+
+```bash
+bash skills/cywu-code-refactor/evals/setup-fixtures.sh
+```
+
+`cywu-code-refactor` 的首轮评测：有技能组断言 100% 通过 vs 无技能基线 94%，价值集中在行为保持纪律。详见 `skills/cywu-code-refactor/evals/iteration-1/benchmark.md`。
+
+## 目录结构 / Structure
+
+```
+cywu-skills/
+├── .claude-plugin/marketplace.json   # 插件注册
+├── docs/creating-skills.md           # 新增技能指南
+├── skills/
+│   ├── cywu-code-refactor/           # SKILL.md + references/ + evals/
+│   └── skill-creator/                # vendored 创作工具
+├── CLAUDE.md
+└── README.md
+```
+
+新增技能约定用 `cywu-` 前缀，完整规范见 [docs/creating-skills.md](docs/creating-skills.md)。
+
+## License
+
+MIT
