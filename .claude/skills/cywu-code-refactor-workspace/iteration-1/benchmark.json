@@ -1,0 +1,336 @@
+{
+  "metadata": {
+    "skill_name": "cywu-code-refactor",
+    "skill_path": "/Users/wuxi/workspace/cywu/cywu-skills/.claude/skills/cywu-code-refactor",
+    "executor_model": "claude (session model, 6 parallel subagents)",
+    "analyzer_model": "claude (session)",
+    "timestamp": "2026-08-12T10:23:55Z",
+    "evals_run": [
+      1,
+      2,
+      3
+    ],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 1293.1,
+        "tokens": 36837,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "产出了 report.md，且覆盖重复逻辑、设计、UI 一致性、性能四个维度，每个维度有具体条目和优先级",
+          "passed": true,
+          "evidence": "report.md 存在；命中维度关键词: ['重复逻辑', '设计', 'UI', '性能']；优先级标记(P0/P1): 有"
+        },
+        {
+          "text": "work/ 副本的 git 提交使用 refactor 前缀",
+          "passed": true,
+          "evidence": "共 10 个提交，其中 refactor 前缀 8 个: ['refactor: 数据写入改为临时文件+原子替换', 'refactor: 统一状态展示，stats 移除与列表不一致的 √/× 符号', 'refactor: 统计重复标题检测优化为 O(n) 单遍', 'refactor: api 层写操作改为不可变更新']"
+        },
+        {
+          "text": "标题归一化逻辑只存在一处实现（api.js 与 cli.js 中重复的 normalizeTitle 被合并，两个模块行为一致）",
+          "passed": true,
+          "evidence": "src/ 中 normalizeTitle 函数定义出现 1 处: ['api.js:6']"
+        },
+        {
+          "text": "统计重复标题的 O(n²) 双重循环被消除",
+          "passed": true,
+          "evidence": "内层 j 循环匹配: 无，双重循环已消除"
+        },
+        {
+          "text": "死代码 formatDateLegacy 被删除",
+          "passed": true,
+          "evidence": "src/ 中 formatDateLegacy 残留: 无，已删除"
+        },
+        {
+          "text": "重构后在 work/ 副本中运行 npm test 全部通过",
+          "passed": true,
+          "evidence": "exit=0；; 14 passed"
+        }
+      ],
+      "notes": [],
+      "eval_name": "full-review-todo-app"
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 556.2,
+        "tokens": 23976,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "report.md 逐个分析了 git 历史中的 fix 提交：每个补丁修的症状是什么、根因是什么",
+          "passed": true,
+          "evidence": "三个补丁主题关键词命中 ['未知折扣码', 'VIP50', '负价格']；症状/根因分析: 有"
+        },
+        {
+          "text": "明确给出了是否为补丁叠补丁的判断结论",
+          "passed": true,
+          "evidence": "报告中出现'补丁叠补丁'判断表述"
+        },
+        {
+          "text": "重构后的代码中不再保留 FIX 兜底注释及对应的特判结构（safeRate 三元、VIP50 early-return 分支被整合进统一实现）",
+          "passed": true,
+          "evidence": "src/ 中 FIX 标记 0 处 ；price.js 中 'return Math.round' 出口 1 处（1 = 单一出口）"
+        },
+        {
+          "text": "重构后在 work/ 副本中运行 npm test 全部通过（10 个用例锁定的行为全部保持）",
+          "passed": true,
+          "evidence": "exit=0；原 10 个契约用例全部 ok"
+        },
+        {
+          "text": "work/ 副本的 git 提交使用 refactor 前缀，且提交信息或报告说明了与原补丁提交的替换关系",
+          "passed": true,
+          "evidence": "refactor 提交 1 个；替换关系说明(报告或提交信息提及原补丁/哈希): 有"
+        }
+      ],
+      "notes": [],
+      "eval_name": "cleanup-discount-calc"
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 467.0,
+        "tokens": 22580,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "产出了 report.md，包含发现清单与重构计划",
+          "passed": true,
+          "evidence": "report.md 存在；发现清单: 有；重构计划/建议: 有"
+        },
+        {
+          "text": "work/ 副本的 git 提交使用 refactor 前缀",
+          "passed": true,
+          "evidence": "共 6 个提交，其中 refactor 前缀 5 个: ['refactor(api): 提取 findTodoOrThrow 并改用不可变更新', 'refactor(store): getStats 重复标题检测 O(n³) 降为 O(n)', 'refactor(cli): 提取 formatTodoLine/matchesFilter 简化 renderList', 'refactor(title): 合并 cli/api 两份重复的标题归一化与校验']"
+        },
+        {
+          "text": "至少合并了一处重复实现（normalizeTitle 或重复的标题校验）",
+          "passed": true,
+          "evidence": "src/ 中 normalizeTitle 函数定义出现 1 处: ['api.js:6']"
+        },
+        {
+          "text": "重构后在 work/ 副本中运行 npm test 全部通过",
+          "passed": true,
+          "evidence": "exit=0；; 12 passed"
+        }
+      ],
+      "notes": [],
+      "eval_name": "casual-refactor-todo"
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.8333,
+        "passed": 5,
+        "failed": 1,
+        "total": 6,
+        "time_seconds": 1065.8,
+        "tokens": 22557,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "产出了 report.md，且覆盖重复逻辑、设计、UI 一致性、性能四个维度，每个维度有具体条目和优先级",
+          "passed": false,
+          "evidence": "report.md 存在；命中维度关键词: ['重复逻辑', '设计', 'UI', '性能']；优先级标记(P0/P1): 无"
+        },
+        {
+          "text": "work/ 副本的 git 提交使用 refactor 前缀",
+          "passed": true,
+          "evidence": "共 8 个提交，其中 refactor 前缀 4 个: ['refactor: cli 命令分发重构——错误处理、参数校验与 UI 一致性', 'refactor: api 层改为不可变更新，并补齐查询门面', 'refactor: 数据层健壮性——损坏文件快速失败与原子写入', 'refactor: 消除重复逻辑与死代码']"
+        },
+        {
+          "text": "标题归一化逻辑只存在一处实现（api.js 与 cli.js 中重复的 normalizeTitle 被合并，两个模块行为一致）",
+          "passed": true,
+          "evidence": "src/ 中 normalizeTitle 函数定义出现 1 处: ['api.js:7']"
+        },
+        {
+          "text": "统计重复标题的 O(n²) 双重循环被消除",
+          "passed": true,
+          "evidence": "内层 j 循环匹配: 无，双重循环已消除"
+        },
+        {
+          "text": "死代码 formatDateLegacy 被删除",
+          "passed": true,
+          "evidence": "src/ 中 formatDateLegacy 残留: 无，已删除"
+        },
+        {
+          "text": "重构后在 work/ 副本中运行 npm test 全部通过",
+          "passed": true,
+          "evidence": "exit=0；; 25 passed"
+        }
+      ],
+      "notes": [],
+      "eval_name": "full-review-todo-app"
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 505.6,
+        "tokens": 22709,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "report.md 逐个分析了 git 历史中的 fix 提交：每个补丁修的症状是什么、根因是什么",
+          "passed": true,
+          "evidence": "报告以『提交|问题|补丁方式』表格逐个分析 3 个 fix 提交（31a1dfa/4e35f0a/f5e0d83），并归纳结构性根因（兜底分散三层、补丁互相绕过、单一出口被破坏）；未用'根因/症状'字面词但语义完整——关键词评分假阴性，人工复核改判通过"
+        },
+        {
+          "text": "明确给出了是否为补丁叠补丁的判断结论",
+          "passed": true,
+          "evidence": "报告中出现'补丁叠补丁'判断表述"
+        },
+        {
+          "text": "重构后的代码中不再保留 FIX 兜底注释及对应的特判结构（safeRate 三元、VIP50 early-return 分支被整合进统一实现）",
+          "passed": true,
+          "evidence": "src/ 中 FIX 标记 0 处 ；price.js 中 'return Math.round' 出口 1 处（1 = 单一出口）"
+        },
+        {
+          "text": "重构后在 work/ 副本中运行 npm test 全部通过（10 个用例锁定的行为全部保持）",
+          "passed": true,
+          "evidence": "exit=0；原 10 个契约用例全部 ok"
+        },
+        {
+          "text": "work/ 副本的 git 提交使用 refactor 前缀，且提交信息或报告说明了与原补丁提交的替换关系",
+          "passed": true,
+          "evidence": "refactor 提交 1 个；替换关系说明(报告或提交信息提及原补丁/哈希): 有"
+        }
+      ],
+      "notes": [],
+      "eval_name": "cleanup-discount-calc"
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 563.0,
+        "tokens": 25634,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "产出了 report.md，包含发现清单与重构计划",
+          "passed": true,
+          "evidence": "report.md 存在；发现清单: 有；重构计划/建议: 有"
+        },
+        {
+          "text": "work/ 副本的 git 提交使用 refactor 前缀",
+          "passed": true,
+          "evidence": "共 6 个提交，其中 refactor 前缀 5 个: ['refactor(api): 增删改用不可变更新替代原地修改', 'refactor(store): getStats 重复标题检测从 O(n²) 优化为单遍 O(n)', 'refactor(cli): renderList 由 40 行 5 层嵌套简化为 filter+format', 'refactor(api,cli): 合并两处重复的标题归一化与校验逻辑']"
+        },
+        {
+          "text": "至少合并了一处重复实现（normalizeTitle 或重复的标题校验）",
+          "passed": true,
+          "evidence": "src/ 中 normalizeTitle 函数定义出现 1 处: ['api.js:6']"
+        },
+        {
+          "text": "重构后在 work/ 副本中运行 npm test 全部通过",
+          "passed": true,
+          "evidence": "exit=0；; 12 passed"
+        }
+      ],
+      "notes": [],
+      "eval_name": "casual-refactor-todo"
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 772.1,
+        "stddev": 453.3982,
+        "min": 467.0,
+        "max": 1293.1
+      },
+      "tokens": {
+        "mean": 27797.6667,
+        "stddev": 7859.3488,
+        "min": 22580,
+        "max": 36837
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.9444,
+        "stddev": 0.0962,
+        "min": 0.8333,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 711.4667,
+        "stddev": 308.2009,
+        "min": 505.6,
+        "max": 1065.8
+      },
+      "tokens": {
+        "mean": 23633.3333,
+        "stddev": 1734.2942,
+        "min": 22557,
+        "max": 25634
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.06",
+      "time_seconds": "+60.6",
+      "tokens": "+4164"
+    }
+  },
+  "notes": [
+    "量化差异集中在报告规范：唯一失败断言是基线 eval-1 报告缺少 P0/P1 优先级分层（技能模板强制要求），其余断言两组全过——强模型基线下，技能的价值更多体现在 qualitative 行为差异而非断言分数",
+    "关键 qualitative 差异（eval-1）：无技能基线越界引入行为变更与新功能（补 remove 命令、--high 入口、错误提示改写、stats 符号统一、测试 12→25）；有技能组把同类改动明确列入\"不动的部分（行为变更需确认）\"，守住了行为保持底线——这正是技能三条底线的直接效果",
+    "例外提示：有技能组 eval-1 仍执行了 stats √/× 符号统一（P1），与其自述\"行为变更需确认\"存在轻微矛盾，建议人工审阅时关注该边界是否需要技能进一步收紧",
+    "两组都独立消除了 O(n²) 统计循环、合并了重复 normalizeTitle、使用 refactor 提交前缀——这些断言不具区分度，属强基线下的共性能力",
+    "eval-2（cleanup 模式）两组都正确判定补丁叠补丁并给出干净重写；基线甚至额外挖出 4 个补丁遗留 bug（负价格钳制被绕过等）。技能组的优势在于报告结构化（逐提交根因表 + 覆盖核对），以及把\"替换关系\"写进提交说明",
+    "耗时/token：有技能组平均 772s/27.8k tokens，无技能基线平均 711s/23.6k tokens——技能带来约 +61s/+4.2k 的开销，换取流程纪律与报告规范"
+  ]
+}

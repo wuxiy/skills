@@ -1,0 +1,11 @@
+{
+  "eval_id": 3,
+  "eval_name": "casual-refactor-todo",
+  "prompt": "这个 todo 小工具写得太赶了，帮我重构一下吧，代码在 fixtures/todo-app。感觉到处都是重复的，函数也臃肿，顺便看看有没有性能问题。老规矩：先复制到 work/ 再改，报告写到 report.md，重构用 git 提交，npm test 别跑挂了。",
+  "assertions": [
+    "产出了 report.md，包含发现清单与重构计划",
+    "至少合并了一处重复实现（normalizeTitle 或重复的标题校验）",
+    "重构后在 work/ 副本中运行 npm test 全部通过",
+    "work/ 副本的 git 提交使用 refactor 前缀"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "eval_id": 2,
+  "eval_name": "cleanup-discount-calc",
+  "prompt": "现在问题解决了，但请你重新 Review 一下今天的几轮修改，看看是不是补丁叠补丁式的修改，如果是的话，重构成最优解。项目是 fixtures/discount-calc，git 历史里是今天的几次提交。请先把项目完整复制到 work/ 再动手（保留 .git 历史），所有修改在副本里用 git 提交；分析结论和重构说明保存为 report.md。项目零依赖，npm test 验证。",
+  "assertions": [
+    "report.md 逐个分析了 git 历史中的 fix 提交：每个补丁修的症状是什么、根因是什么",
+    "明确给出了是否为补丁叠补丁的判断结论",
+    "重构后的代码中不再保留 FIX 兜底注释及对应的特判结构（safeRate 三元、VIP50 early-return 分支被整合进统一实现）",
+    "重构后在 work/ 副本中运行 npm test 全部通过（10 个用例锁定的行为全部保持）",
+    "work/ 副本的 git 提交使用 refactor 前缀，且提交信息或报告说明了与原补丁提交的替换关系"
+  ]
+}

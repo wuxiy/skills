@@ -1,0 +1,7 @@
+# Generated fixture repos — rebuilt by setup-fixtures.sh (contain nested .git)
+fixtures/
+
+# Bulky refactored project copies produced by eval runs (contain nested .git)
+**/outputs/work/
+
+node_modules/

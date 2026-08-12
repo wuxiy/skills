@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "report.md 逐个分析了 git 历史中的 fix 提交：每个补丁修的症状是什么、根因是什么",
+      "passed": true,
+      "evidence": "报告以『提交|问题|补丁方式』表格逐个分析 3 个 fix 提交（31a1dfa/4e35f0a/f5e0d83），并归纳结构性根因（兜底分散三层、补丁互相绕过、单一出口被破坏）；未用'根因/症状'字面词但语义完整——关键词评分假阴性，人工复核改判通过"
+    },
+    {
+      "text": "明确给出了是否为补丁叠补丁的判断结论",
+      "passed": true,
+      "evidence": "报告中出现'补丁叠补丁'判断表述"
+    },
+    {
+      "text": "重构后的代码中不再保留 FIX 兜底注释及对应的特判结构（safeRate 三元、VIP50 early-return 分支被整合进统一实现）",
+      "passed": true,
+      "evidence": "src/ 中 FIX 标记 0 处 ；price.js 中 'return Math.round' 出口 1 处（1 = 单一出口）"
+    },
+    {
+      "text": "重构后在 work/ 副本中运行 npm test 全部通过（10 个用例锁定的行为全部保持）",
+      "passed": true,
+      "evidence": "exit=0；原 10 个契约用例全部 ok"
+    },
+    {
+      "text": "work/ 副本的 git 提交使用 refactor 前缀，且提交信息或报告说明了与原补丁提交的替换关系",
+      "passed": true,
+      "evidence": "refactor 提交 1 个；替换关系说明(报告或提交信息提及原补丁/哈希): 有"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

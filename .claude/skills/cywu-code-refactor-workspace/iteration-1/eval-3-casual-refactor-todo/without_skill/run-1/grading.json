@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "产出了 report.md，包含发现清单与重构计划",
+      "passed": true,
+      "evidence": "report.md 存在；发现清单: 有；重构计划/建议: 有"
+    },
+    {
+      "text": "work/ 副本的 git 提交使用 refactor 前缀",
+      "passed": true,
+      "evidence": "共 6 个提交，其中 refactor 前缀 5 个: ['refactor(api): 增删改用不可变更新替代原地修改', 'refactor(store): getStats 重复标题检测从 O(n²) 优化为单遍 O(n)', 'refactor(cli): renderList 由 40 行 5 层嵌套简化为 filter+format', 'refactor(api,cli): 合并两处重复的标题归一化与校验逻辑']"
+    },
+    {
+      "text": "至少合并了一处重复实现（normalizeTitle 或重复的标题校验）",
+      "passed": true,
+      "evidence": "src/ 中 normalizeTitle 函数定义出现 1 处: ['api.js:6']"
+    },
+    {
+      "text": "重构后在 work/ 副本中运行 npm test 全部通过",
+      "passed": true,
+      "evidence": "exit=0；; 12 passed"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

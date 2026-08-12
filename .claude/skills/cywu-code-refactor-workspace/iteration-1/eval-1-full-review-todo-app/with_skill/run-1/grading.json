@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "产出了 report.md，且覆盖重复逻辑、设计、UI 一致性、性能四个维度，每个维度有具体条目和优先级",
+      "passed": true,
+      "evidence": "report.md 存在；命中维度关键词: ['重复逻辑', '设计', 'UI', '性能']；优先级标记(P0/P1): 有"
+    },
+    {
+      "text": "work/ 副本的 git 提交使用 refactor 前缀",
+      "passed": true,
+      "evidence": "共 10 个提交，其中 refactor 前缀 8 个: ['refactor: 数据写入改为临时文件+原子替换', 'refactor: 统一状态展示，stats 移除与列表不一致的 √/× 符号', 'refactor: 统计重复标题检测优化为 O(n) 单遍', 'refactor: api 层写操作改为不可变更新']"
+    },
+    {
+      "text": "标题归一化逻辑只存在一处实现（api.js 与 cli.js 中重复的 normalizeTitle 被合并，两个模块行为一致）",
+      "passed": true,
+      "evidence": "src/ 中 normalizeTitle 函数定义出现 1 处: ['api.js:6']"
+    },
+    {
+      "text": "统计重复标题的 O(n²) 双重循环被消除",
+      "passed": true,
+      "evidence": "内层 j 循环匹配: 无，双重循环已消除"
+    },
+    {
+      "text": "死代码 formatDateLegacy 被删除",
+      "passed": true,
+      "evidence": "src/ 中 formatDateLegacy 残留: 无，已删除"
+    },
+    {
+      "text": "重构后在 work/ 副本中运行 npm test 全部通过",
+      "passed": true,
+      "evidence": "exit=0；; 14 passed"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}
