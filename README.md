@@ -34,6 +34,15 @@ bash skills/cywu-code-refactor/evals/setup-fixtures.sh
 
 `cywu-code-refactor` 的首轮评测：有技能组断言 100% 通过 vs 无技能基线 94%，价值集中在行为保持纪律。详见 `skills/cywu-code-refactor/evals/iteration-1/benchmark.md`。
 
+## Vibe Code 经验与技巧 / Vibe Code Knowledge
+
+仓库还沉淀 vibe coding 的经验与 prompt 技巧，见 [vibe-code/](vibe-code/README.md)：
+
+- **prompts/**：可复用的 prompt 模板 —— goal 模式（验收清单驱动开发）、深度思考、重构 AGENTS.md
+- **experience/**：实战经验 —— 前端"感知性能"10 招、AI 界面配色、AI 编码工作流最佳实践
+
+这些是直接可读、可复制的文档，不经过插件加载。
+
 ## 目录结构 / Structure
 
 ```
@@ -43,6 +52,9 @@ cywu-skills/
 ├── skills/
 │   ├── cywu-code-refactor/           # SKILL.md + references/ + evals/
 │   └── skill-creator/                # vendored 创作工具
+├── vibe-code/                        # 经验技巧库：prompts/ 模板 + experience/ 实战
+│   ├── prompts/                      # goal-mode / deep-thinking / refactor-agents
+│   └── experience/                   # perceived-performance / ai-ui-styling / best-practices
 ├── CLAUDE.md
 └── README.md
 ```

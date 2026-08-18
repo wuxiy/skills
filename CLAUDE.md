@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Claude Code marketplace plugin: a skills library (`cywu-skills`) by wuxiy. Version: **0.1.0**.
+Claude Code marketplace plugin: a skills library plus vibe-code knowledge (`cywu-skills`) by wuxiy. Version: **0.1.0**.
 
 ## Architecture
 
@@ -14,6 +14,14 @@ Each skill is self-contained: `SKILL.md` (YAML frontmatter + docs) plus optional
 |-------|---------|
 | **cywu-code-refactor** | Post-implementation review + refactor. Two modes: `full` (review a just-finished feature for duplicated logic / design / UI consistency / performance, then refactor) and `cleanup` (re-review a stack of fix patches, consolidate into the optimal solution). Guardrails: behavior preservation, verify every step, small reversible commits. |
 | **skill-creator** | Vendored from [anthropics/skills](https://github.com/anthropics/skills) (MIT). Author, modify, evaluate, and benchmark skills. |
+
+## Vibe Code 经验与技巧
+
+仓库除了 skills，还维护 vibe coding 的经验与 prompt 技巧，见 [`vibe-code/`](vibe-code/README.md)：
+- **prompts/**：可复用的 prompt 模板（goal 模式、深度思考、重构 AGENTS.md）
+- **experience/**：实战经验（前端感知性能 10 招、AI 界面配色、AI 编码工作流最佳实践）
+
+这些是直接可读、可复制的文档，**不经过插件加载**，也不受"技能自包含"约束（可自由链接 `vibe-code/` 内部文件）。
 
 ## Skill Loading
 
@@ -46,6 +54,7 @@ All skills MUST use the `cywu-` prefix. Full guide: [docs/creating-skills.md](do
 | Topic | File |
 |-------|------|
 | Creating / structuring a new skill | [docs/creating-skills.md](docs/creating-skills.md) |
+| Vibe-code 经验与技巧索引 | [vibe-code/README.md](vibe-code/README.md) |
 
 ## Licensing
 
