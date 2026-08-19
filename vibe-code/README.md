@@ -17,3 +17,4 @@
 | [best-practices.md](experience/best-practices.md) | AI 编码工作流最佳实践：`/better-harness`、业务术语表。 |
 | [perceived-performance.md](experience/perceived-performance.md) | 前端"感知性能"10 招：不提高后端性能，也能让体验"变快"。 |
 | [ai-ui-styling.md](experience/ai-ui-styling.md) | 让 AI 生成的软件不丑：喂一张配色规范图，让它重配色。 |
+| [context-management.md](experience/context-management.md) | 上下文管理：稳定内容前置吃满 prompt cache、长任务压缩上下文、按需加载 MCP、保持配置稳定。 |
