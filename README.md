@@ -39,7 +39,7 @@ bash skills/cywu-code-refactor/evals/setup-fixtures.sh
 仓库还沉淀 vibe coding 的经验与 prompt 技巧，见 [vibe-code/](vibe-code/README.md)：
 
 - **prompts/**：可复用的 prompt 模板 —— goal 模式（验收清单驱动开发）、深度思考、重构 AGENTS.md
-- **experience/**：实战经验 —— 前端"感知性能"10 招、AI 界面配色、AI 编码工作流最佳实践
+- **experience/**：实战经验 —— 前端"感知性能"10 招、AI 界面配色、AI 编码工作流最佳实践、Codex 5.6 专业配置
 
 这些是直接可读、可复制的文档，不经过插件加载。
 
