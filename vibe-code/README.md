@@ -9,6 +9,7 @@
 | [goal-mode.md](prompts/goal-mode.md) | goal 模式：先确认需求 → 出验收清单 → 开发 → 实际运行逐项验证。做任何"要开发一个项目"的起点。 |
 | [deep-thinking.md](prompts/deep-thinking.md) | 深度思考：钢人论证 / 假设检查，让 AI 先问对问题、再给答案。 |
 | [refactor-agents.md](prompts/refactor-agents.md) | 按渐进式披露原则重构 AGENTS.md，把大而全的指令拆成根文件 + 分类文件。 |
+| [issue-style-task.md](prompts/issue-style-task.md) | 把任务写得像 GitHub Issue：目标 + 范围 + 参考 + 限制 + 验收，用具体上下文让 Codex 稳定执行。 |
 
 ## experience/ — 实战经验
 
