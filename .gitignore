@@ -4,3 +4,4 @@
 # 评测产生的笨重项目副本（已提交的证据仅保留在 evals/iteration-N/ 下）
 **/outputs/work/
 **/fixtures/
+.alma-snapshots
