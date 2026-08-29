@@ -10,6 +10,7 @@
 | [deep-thinking.md](prompts/deep-thinking.md) | 深度思考：钢人论证 / 假设检查，让 AI 先问对问题、再给答案。 |
 | [refactor-agents.md](prompts/refactor-agents.md) | 按渐进式披露原则重构 AGENTS.md，把大而全的指令拆成根文件 + 分类文件。 |
 | [issue-style-task.md](prompts/issue-style-task.md) | 把任务写得像 GitHub Issue：目标 + 范围 + 参考 + 限制 + 验收，用具体上下文让 Codex 稳定执行。 |
+| [reckoning-first.md](prompts/reckoning-first.md) | 「先梳理我的意见，理解意图，再设计动工方案」：口喷一大段需求后对齐再用，治 AI 抢跑返工。 |
 
 ## experience/ — 实战经验
 
