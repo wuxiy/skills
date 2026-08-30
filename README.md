@@ -43,6 +43,10 @@ bash skills/cywu-code-refactor/evals/setup-fixtures.sh
 
 这些是直接可读、可复制的文档，不经过插件加载。
 
+## AI 时代实用仓库收录 / AI-Era Repo Index
+
+收录经过验证、值得收藏的第三方 GitHub 仓库（定位 / 用法 / 效果 / 注意点），见 [ai-repos/](ai-repos/README.md)。
+
 ## 目录结构 / Structure
 
 ```
@@ -55,6 +59,7 @@ cywu-skills/
 ├── vibe-code/                        # 经验技巧库：prompts/ 模板 + experience/ 实战
 │   ├── prompts/                      # goal-mode / deep-thinking / refactor-agents
 │   └── experience/                   # perceived-performance / ai-ui-styling / best-practices
+├── ai-repos/                         # AI 时代实用仓库收录（索引 + 每仓一篇）
 ├── CLAUDE.md
 └── README.md
 ```
