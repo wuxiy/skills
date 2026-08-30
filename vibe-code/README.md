@@ -23,3 +23,4 @@
 | [codex-config.md](experience/codex-config.md) | Codex 5.6 专业设置：固定模型 + Reasoning Effort、任务 Profile、项目级配置、Lifecycle Hooks。 |
 | [codex-team-and-iteration.md](experience/codex-team-and-iteration.md) | Codex 团队化协作：持久子代理团队(全局 agents.md)、快速迭代期优先级控制(项目级 agents.md)、侧边聊天不污染主上下文。 |
 | [archify.md](experience/archify.md) | 收录第三方 skill：交互式架构/工作流/时序/数据流/生命周期图（tt-a1i/archify）。安装、原始仓库、场景、用法、效果。 |
+| [ai-code-evolution.md](experience/ai-code-evolution.md) | AI 时代代码不腐化：架构沉淀、单测覆盖'想当然'坑、Bug 留回归测试+规则、Rules 按模块拆、少加无用功能、GitHub Actions 兜底、流程卡点 AI 自验。 |
