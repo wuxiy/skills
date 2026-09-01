@@ -56,6 +56,20 @@ All skills MUST use the `cywu-` prefix. Full guide: [docs/creating-skills.md](do
 | Creating / structuring a new skill | [docs/creating-skills.md](docs/creating-skills.md) |
 | Vibe-code 经验与技巧索引 | [vibe-code/README.md](vibe-code/README.md) |
 
+## Commit Message 约定
+
+本仓库提交遵循「WHY 化」规范（详见 [vibe-code/prompts/commit-message.md](vibe-code/prompts/commit-message.md)）：
+
+- **类型**: `feat` / `fix` / `chore` / `refactor` / `docs` / `perf` / `test`
+- **Subject**: 中文动词开头，≤50 字，一句说清"做了什么"。
+- **Body**: 大改动（改架构 / 改抽象 / 有取舍）必须补 WHY，用 `why: ` 起句讲动机，
+  不复述 Subject。小改动（拼写/格式）允许一句到底，不强行加结构。
+- **Decision 块**: 极重要的架构 / 取舍类提交，补（不必每项都填）：
+  `MODULE / WHY / ALTERNATIVES / CHOSEN / TRADEOFFS / RISKS / SUPERSEDES`
+- **判断标准**: `git log` 铺开扫一眼，只读 Subject 就能懂"这行为什么存在"，即达标。
+
+---
+
 ## Licensing
 
 MIT (see [LICENSE](LICENSE)). Vendored skills keep their own license file alongside them (e.g. `skills/skill-creator/LICENSE.txt`). Contributed code must remain MIT-compatible.
