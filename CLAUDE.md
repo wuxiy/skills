@@ -17,9 +17,11 @@ Each skill is self-contained: `SKILL.md` (YAML frontmatter + docs) plus optional
 
 ## Vibe Code 经验与技巧
 
-仓库除了 skills，还维护 vibe coding 的经验与 prompt 技巧，见 [`vibe-code/`](vibe-code/README.md)：
-- **prompts/**：可复用的 prompt 模板（goal 模式、深度思考、重构 AGENTS.md）
-- **experience/**：实战经验（前端感知性能 10 招、AI 界面配色、AI 编码工作流最佳实践、Codex 5.6 专业配置）
+仓库除了 skills，还维护 vibe coding 的经验与 prompt 技巧，见 [`vibe-code/`](vibe-code/README.md)（含"场景导览"快速入口）：
+- **prompts/**：可复用的 prompt 模板与规则（需求对齐、执行纪律、设计克制、commit 规范）
+- **experience/**：实战经验（代码不腐化、模块划分、上下文管理、Git 知识循环、AI 可靠工程、Codex 三件套 Skills）
+
+另维护第三方仓库收录 [ai-repos/](ai-repos/README.md)（每仓一篇：定位 / 安装 / 用法 / 效果 / 注意点）。
 
 这些是直接可读、可复制的文档，**不经过插件加载**，也不受"技能自包含"约束（可自由链接 `vibe-code/` 内部文件）。
 

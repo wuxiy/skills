@@ -38,8 +38,8 @@ bash skills/cywu-code-refactor/evals/setup-fixtures.sh
 
 仓库还沉淀 vibe coding 的经验与 prompt 技巧，见 [vibe-code/](vibe-code/README.md)：
 
-- **prompts/**：可复用的 prompt 模板 —— goal 模式（验收清单驱动开发）、深度思考、重构 AGENTS.md
-- **experience/**：实战经验 —— 前端"感知性能"10 招、AI 界面配色、AI 编码工作流最佳实践、Codex 5.6 专业配置
+- **prompts/**：可复用的 prompt 模板与规则（9 篇）—— 需求对齐（goal 模式 / 先对齐再动手 / Issue 式任务）、执行纪律（拆单+Review 门禁 / 收敛复核）、设计克制三原则、commit WHY 化
+- **experience/**：实战经验（11 篇）—— 代码不腐化方法论、模块划分、上下文管理、Git 知识循环、AI 可靠工程三环、Codex 三件套 Skills、前端体验
 
 这些是直接可读、可复制的文档，不经过插件加载。
 
@@ -56,10 +56,11 @@ cywu-skills/
 ├── skills/
 │   ├── cywu-code-refactor/           # SKILL.md + references/ + evals/
 │   └── skill-creator/                # vendored 创作工具
-├── vibe-code/                        # 经验技巧库：prompts/ 模板 + experience/ 实战
-│   ├── prompts/                      # goal-mode / deep-thinking / refactor-agents
-│   └── experience/                   # perceived-performance / ai-ui-styling / best-practices
-├── ai-repos/                         # AI 时代实用仓库收录（索引 + 每仓一篇）
+├── vibe-code/                        # 经验技巧库（README 含场景导览）
+│   ├── prompts/                      # 模板与规则：需求对齐 / 执行纪律 / 设计克制 / commit 规范
+│   └── experience/                   # 实战：代码质量 / 上下文管理 / 前端体验 / Codex 生态
+├── ai-repos/                         # AI 时代实用仓库收录
+│   └── repos/                        # 每仓一篇（定位 / 安装 / 用法 / 效果 / 注意点）
 ├── CLAUDE.md
 └── README.md
 ```
