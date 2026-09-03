@@ -30,3 +30,4 @@
 | [ai-code-evolution.md](experience/ai-code-evolution.md) | AI 时代代码不腐化：架构沉淀、单测覆盖'想当然'坑、Bug 留回归测试+规则、Rules 按模块拆、少加无用功能、GitHub Actions 兜底、流程卡点 AI 自验。 |
 | [module-split-by-change.md](experience/module-split-by-change.md) | 模块按'什么会变'分、不按流程分：降低耦合、缩小 AI 改动上下文，判断标准=一个需求只动一个模块。 |
 | [git-knowledge-loop.md](experience/git-knowledge-loop.md) | 基于 Git 的知识循环：commit-context(对话+决策写进commit) / distill-module(蒸馏决策史) / map-module(对抗性验证旧代码) + AGENTS.md 渐进式披露。 |
+| [ai-reliable-engineering.md](experience/ai-reliable-engineering.md) | AI 可靠系统工程三环：目标对齐(苏格拉底式需求获取) / 路径探索(四维权衡+probe+ADR) / 循迹前行(变更追溯+最小E2E验收)。 |
