@@ -31,3 +31,4 @@
 | [module-split-by-change.md](experience/module-split-by-change.md) | 模块按'什么会变'分、不按流程分：降低耦合、缩小 AI 改动上下文，判断标准=一个需求只动一个模块。 |
 | [git-knowledge-loop.md](experience/git-knowledge-loop.md) | 基于 Git 的知识循环：commit-context(对话+决策写进commit) / distill-module(蒸馏决策史) / map-module(对抗性验证旧代码) + AGENTS.md 渐进式披露。 |
 | [ai-reliable-engineering.md](experience/ai-reliable-engineering.md) | AI 可靠系统工程三环：目标对齐(苏格拉底式需求获取) / 路径探索(四维权衡+probe+ADR) / 循迹前行(变更追溯+最小E2E验收)。 |
+| [codex-skills-trio.md](experience/codex-skills-trio.md) | Codex 三件套 Skills：planning-with-files(长任务外部记忆) / karpathy-guidelines(约束别乱改) / agent-browser(写完自验网页) + 适用场景与第三方 Skill 避坑。 |
