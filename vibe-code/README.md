@@ -13,6 +13,8 @@
 | [reckoning-first.md](prompts/reckoning-first.md) | 「先梳理我的意见，理解意图，再设计动工方案」：口喷一大段需求后对齐再用，治 AI 抢跑返工。 |
 | [convergence-review.md](prompts/convergence-review.md) | 「多轮修改后的收敛复核」强制规则：治 AI 改 bug 留下临时分支/兜底/死代码的屎山，可写入 AGENTS.md/CLAUDE.md。 |
 | [commit-message.md](prompts/commit-message.md) | Commit Message 规范（WHY 化）：大改动补 why Body、极重要的补 Decision 块，可写入 AGENTS.md/CLAUDE.md。 |
+| [design-restraint.md](prompts/design-restraint.md) | 设计克制三原则：字重对比（标题粗/正文细淡）、极致留白（1.5x）、90% 中性色+10% 单一强调色。治 AI 界面喧闹粗糙。 |
+| [execution-discipline.md](prompts/execution-discipline.md) | 执行纪律：按 PRD 拆单落盘、主 Agent 串行(禁分支/并行)、每条 Codex Review 门禁(最多3遍)、禁止过度设计。 |
 
 ## experience/ — 实战经验
 
