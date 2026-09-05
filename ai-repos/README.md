@@ -8,6 +8,7 @@
 |------|------|------|
 | [VoltAgent/awesome-design-md](repos/awesome-design-md.md) | Agent UI 设计对齐 | 主流品牌设计系统的 DESIGN.md 合集，丢进项目后让 Coding Agent 生成匹配的界面。 |
 | [tt-a1i/archify](repos/archify.md) | 交互式架构图 Skill | 代码库/系统描述 → 精美交互式系统图（架构/工作流/时序/数据流/生命周期），Node.js 渲染+校验。 |
+| [iOfficeAI/OfficeCLI](repos/officecli.md) | Office 文档自动化 CLI | 专为 AI Agent 打造：一行命令读写/编辑/自动化 Word/Excel/PPT，单一二进制免装 Office。 |
 
 ---
 
