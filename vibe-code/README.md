@@ -12,6 +12,7 @@
 | 界面丑、没呼吸感 | [design-restraint](prompts/design-restraint.md) · [ai-ui-styling](experience/ai-ui-styling.md) · [perceived-performance](experience/perceived-performance.md) |
 | 上下文爆掉、配置不稳 | [context-management](experience/context-management.md) · [codex-team-and-iteration](experience/codex-team-and-iteration.md) |
 | 想搭完整 AI 工程流水线 | [ai-reliable-engineering](experience/ai-reliable-engineering.md) · [codex-skills-trio](experience/codex-skills-trio.md) · [codex-config](experience/codex-config.md) |
+| 想建立 Agent 工作哲学 | [eight-agent-principles](experience/eight-agent-principles.md)（8 原则，每点可直接粘贴给 Agent） |
 
 ## prompts/ — 可复用 Prompt 模板
 
@@ -72,6 +73,7 @@
 
 | 经验 | 要点 |
 |------|------|
+| [eight-agent-principles.md](experience/eight-agent-principles.md) | Skill 将死方法论永生：8 原则（第一性原理/对抗审查/消融实验/奥卡姆剃刀/列不自信点/独立思考/批判思维/高内聚低耦合），每点附可直接粘贴的 Prompt 表达。 |
 | [ai-reliable-engineering.md](experience/ai-reliable-engineering.md) | AI 可靠系统工程三环：目标对齐(苏格拉底式需求获取) / 路径探索(四维权衡+probe+ADR) / 循迹前行(变更追溯+最小E2E验收)。 |
 | [codex-skills-trio.md](experience/codex-skills-trio.md) | Codex 三件套 Skills：planning-with-files(长任务外部记忆) / karpathy-guidelines(约束别乱改) / agent-browser(写完自验网页) + 适用场景与第三方 Skill 避坑。 |
 | [codex-config.md](experience/codex-config.md) | Codex 5.6 专业设置：固定模型 + Reasoning Effort、任务 Profile、项目级配置、Lifecycle Hooks。 |
