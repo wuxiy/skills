@@ -11,6 +11,7 @@
 | [iOfficeAI/OfficeCLI](repos/officecli.md) | Office 文档自动化 CLI | 专为 AI Agent 打造：一行命令读写/编辑/自动化 Word/Excel/PPT，单一二进制免装 Office。 |
 | [Tencent/teamai-cli](repos/teamai-cli.md) | 团队 Agent 资源编排 | git 仓作单一事实源，统一分发 skills/rules/hooks/MCP/知识到 Claude Code/Codex/Cursor 等所有 Agent。 |
 | [evoiz/Agentic-Design-Patterns](repos/agentic-design-patterns.md) | Agent 设计模式教材 | 《Agentic Design Patterns》配套仓：21 章 PDF + Jupyter notebook，系统讲 Agent 模式语言（提示链/路由/记忆/MCP/A2A/护栏/评估等）。 |
+| [nektos/act](repos/act.md) | 本地跑 GitHub Actions | Docker 容器在本地执行验证 workflow，免 commit/push 等 CI；可当本地任务执行器替代 Makefile。 |
 
 ---
 
