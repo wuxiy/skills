@@ -13,7 +13,7 @@
 | 上下文爆掉、配置不稳 | [context-management](experience/context-management.md) · [codex-team-and-iteration](experience/codex-team-and-iteration.md) |
 | 想搭完整 AI 工程流水线 | [ai-reliable-engineering](experience/ai-reliable-engineering.md) · [codex-skills-trio](experience/codex-skills-trio.md) · [codex-config](experience/codex-config.md) |
 | 想建立 Agent 工作哲学 | [eight-agent-principles](experience/eight-agent-principles.md)（8 原则，每点可直接粘贴给 Agent） |
-| 我给 AI 写了功能/修了 bug 要验证 | [playwright-scripted-testing](prompts/playwright-scripted-testing.md)（别让 AI 点页面，让它写脚本）· [codex-skills-trio](experience/codex-skills-trio.md)（agent-browser） |
+| 我给 AI 写了功能/修了 bug 要验证 | [business-testing-rules](prompts/business-testing-rules.md)（测试该怎么写）· [playwright-scripted-testing](prompts/playwright-scripted-testing.md)（别让 AI 点页面，让它写脚本）· [codex-skills-trio](experience/codex-skills-trio.md)（agent-browser） |
 
 ## prompts/ — 可复用 Prompt 模板
 
@@ -33,6 +33,7 @@
 | [execution-discipline.md](prompts/execution-discipline.md) | 执行纪律：按 PRD 拆单落盘、主 Agent 串行(禁分支/并行)、每条 Codex Review 门禁(最多3遍)、禁止过度设计。 |
 | [convergence-review.md](prompts/convergence-review.md) | 「多轮修改后的收敛复核」强制规则：治 AI 改 bug 留下临时分支/兜底/死代码的屎山，可写入 AGENTS.md/CLAUDE.md。 |
 | [playwright-scripted-testing.md](prompts/playwright-scripted-testing.md) | 让 Agent 写 Playwright 脚本而非自己点页面：Agent=脚本作者,runner=执行。省 token、可回归,规则贴 AGENTS.md/CLAUDE.md。 |
+| [business-testing-rules.md](prompts/business-testing-rules.md) | 业务项目怎么写测试 6 条：测行为不测实现 / 先 BDD 场景 / 禁 mock / 重 E2E 分级 / 盯失败路径 / 规则写成 lint。治 AI 写的脆弱测试。 |
 
 ### 🎨 设计方向
 
