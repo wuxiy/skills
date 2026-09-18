@@ -13,6 +13,7 @@ Each skill is self-contained: `SKILL.md` (YAML frontmatter + docs) plus optional
 | Skill | Purpose |
 |-------|---------|
 | **cywu-code-refactor** | Post-implementation review + refactor. Two modes: `full` (review a just-finished feature for duplicated logic / design / UI consistency / performance, then refactor) and `cleanup` (re-review a stack of fix patches, consolidate into the optimal solution). Guardrails: behavior preservation, verify every step, small reversible commits. |
+| **cywu-create-readme** | Author a project's README: read the codebase to establish what the project is and how it runs, pick a structure by project type, then verify every command / path / badge actually exists. Accuracy over polish; GFM + GitHub admonitions. Ships `references/structure.md` (type-specific skeletons) and `references/inspiration/` (4 attributed MIT reference READMEs). |
 | **skill-creator** | Vendored from [anthropics/skills](https://github.com/anthropics/skills) (MIT). Author, modify, evaluate, and benchmark skills. |
 
 ## Vibe Code 经验与技巧

@@ -5,3 +5,7 @@
 **/outputs/work/
 **/fixtures/
 .alma-snapshots
+
+# Python 缓存（skill-creator 脚本运行产物）
+__pycache__/
+*.pyc

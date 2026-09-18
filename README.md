@@ -7,6 +7,7 @@ Claude Code 技能库 / A skills library for [Claude Code](https://claude.ai/cod
 | Skill | 说明 |
 |-------|------|
 | **cywu-code-refactor** | 需求开发完成后的 review + 重构。两种模式：`full`（审查刚完成功能的重复逻辑 / 设计 / UI 一致性 / 性能后重构）与 `cleanup`（复盘几轮补丁式修改，收敛成最优解）。守住三条底线：行为保持、步步验证、小步可退。 |
+| **cywu-create-readme** | 为项目撰写 README：先通读代码库搞清"是什么、怎么跑"，再按项目类型选结构起草，最后逐条核实命令/路径/徽章真实存在。准确优先于漂亮，输出 GFM + GitHub admonition。 |
 | **skill-creator** | 技能创作与评测工具，vendored 自 [anthropics/skills](https://github.com/anthropics/skills)（MIT）。 |
 
 ## 安装 / Install
