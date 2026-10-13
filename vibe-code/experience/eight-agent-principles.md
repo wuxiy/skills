@@ -66,10 +66,10 @@
 
 | 原则 | 对应已有条目 |
 |------|-------------|
-| 1️⃣ 第一性原理 | [reckoning-first](prompts/reckoning-first.md)（先对齐再动手）· [goal-mode](prompts/goal-mode.md) |
-| 2️⃣ 对抗式审查 | [execution-discipline](prompts/execution-discipline.md)（Review 门禁）· [git-knowledge-loop](experience/git-knowledge-loop.md)（map-module 对抗性验证）|
-| 4️⃣ 奥卡姆剃刀 | [execution-discipline](prompts/execution-discipline.md)（禁止过度设计）|
-| 8️⃣ 高内聚低耦合 | [module-split-by-change](experience/module-split-by-change.md)（按"什么会变"分模块）|
-| 全 8 点作为工作哲学 | [ai-reliable-engineering](experience/ai-reliable-engineering.md)（目标/路径/循迹三环）|
+| 1️⃣ 第一性原理 | [reckoning-first](../prompts/reckoning-first.md)（先对齐再动手）· [goal-mode](../prompts/goal-mode.md) |
+| 2️⃣ 对抗式审查 | [execution-discipline](../prompts/execution-discipline.md)（Review 门禁）· [git-knowledge-loop](git-knowledge-loop.md)（map-module 对抗性验证）|
+| 4️⃣ 奥卡姆剃刀 | [execution-discipline](../prompts/execution-discipline.md)（禁止过度设计）|
+| 8️⃣ 高内聚低耦合 | [module-split-by-change](module-split-by-change.md)（按"什么会变"分模块）|
+| 全 8 点作为工作哲学 | [ai-reliable-engineering](ai-reliable-engineering.md)（目标/路径/循迹三环）|
 
 > **一句话**：模型在吞掉"怎么做"的通用知识，工程师的价值上移到"做什么、凭什么、怎么验"——这 8 条就是把这套思维显式化成 Agent 能听懂的表达。

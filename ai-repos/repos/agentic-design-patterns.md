@@ -53,7 +53,7 @@ jupyter notebook Chapter_01_Prompt_Chaining.ipynb
 - 想**系统补齐 Agent 设计模式**的知识地图（而不是零散看博客）
 - 设计自己的 Agent 系统时，对照"这个场景该用哪个模式"
 - 给团队做 Agent 工程培训时的现成教材
-- 与本库 [eight-agent-principles](../experience/eight-agent-principles.md)、[ai-reliable-engineering](../experience/ai-reliable-engineering.md) 互补：那两篇是**工作方法论**，这个仓是**模式百科/教科书**
+- 与本库 [eight-agent-principles](../../vibe-code/experience/eight-agent-principles.md)、[ai-reliable-engineering](../../vibe-code/experience/ai-reliable-engineering.md) 互补：那两篇是**工作方法论**，这个仓是**模式百科/教科书**
 
 ## 注意点
 - **协议是 Educational 而非 MIT/Apache**——用于学习/教学/研究没问题，**商用或再分发前先确认授权**

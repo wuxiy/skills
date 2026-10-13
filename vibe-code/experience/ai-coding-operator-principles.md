@@ -74,10 +74,10 @@
 | 本文观点 | 库内呼应 | 关系 |
 |---------|---------|------|
 | "Skill 将死"（思维方式别装 Skill） | [eight-agent-principles](eight-agent-principles.md)（卡比"Skill 将死，方法论永生"） | **高度一致**：方法论长在人身上，Skill 只补事实性/工具性知识 |
-| 少命令多提问 | [reckoning-first](prompts/reckoning-first.md) · [deep-thinking](prompts/deep-thinking.md) · grill-me（[ai-reliable-engineering](ai-reliable-engineering.md)） | 同源：先逼出方案空间再拍板 |
-| 控制设计而不是代码 | [goal-mode](prompts/goal-mode.md) · [issue-style-task](prompts/issue-style-task.md) · [module-split-by-change](module-split-by-change.md) | 同源：设计先行 |
-| 反对纯 AI Review Loop | [execution-discipline](prompts/execution-discipline.md)（Review 门禁但由人设卡点） | **基本兼容**：两者都要求人守住决策位 |
-| 收敛复核（AI 自主复核） | [convergence-review](prompts/convergence-review.md) | **存在张力**：该文让 AI 自主发起最终复核，本文反对 AI 自循环——分歧点在"复核结论是否需要人过滤"，建议按任务重要性取舍 |
+| 少命令多提问 | [reckoning-first](../prompts/reckoning-first.md) · [deep-thinking](../prompts/deep-thinking.md) · grill-me（[ai-reliable-engineering](ai-reliable-engineering.md)） | 同源：先逼出方案空间再拍板 |
+| 控制设计而不是代码 | [goal-mode](../prompts/goal-mode.md) · [issue-style-task](../prompts/issue-style-task.md) · [module-split-by-change](module-split-by-change.md) | 同源：设计先行 |
+| 反对纯 AI Review Loop | [execution-discipline](../prompts/execution-discipline.md)（Review 门禁但由人设卡点） | **基本兼容**：两者都要求人守住决策位 |
+| 收敛复核（AI 自主复核） | [convergence-review](../prompts/convergence-review.md) | **存在张力**：该文让 AI 自主发起最终复核，本文反对 AI 自循环——分歧点在"复核结论是否需要人过滤"，建议按任务重要性取舍 |
 | 三件套 Skills / agent-browser | [codex-skills-trio](codex-skills-trio.md) | **张力参考**：本文会认可 agent-browser（工具性）而质疑 planning-with-files/karpathy-guidelines（方法论性）——两种流派，按场景选 |
 
 > **一句话**：工具和模型的差异会越来越小，人的差异会越来越大——学思想、控设计、勤检查，让质量跟着你走。

@@ -54,7 +54,7 @@ act -W .github/workflows/build.yml   # 指定 workflow 文件
 - **本地快速测 workflow**：改 CI 配置后本地先验证，省掉"推远端→等 CI→失败→再改"的漫长循环
 - **开发环境复刻 CI**：本地环境变量/文件系统对齐 GitHub runner，行为可信
 - **替代 Makefile**：用 `.github/workflows/` 当统一任务执行器，本地和 CI 共用一套
-- **CI 行为调试**（与本库 [ai-code-evolution](../vibe-code/experience/ai-code-evolution.md) 的 "GitHub Actions 兜底、别只信一个绿色结果" 呼应）：交付前本地跑通再推，减少"源码对但线上旧文件/CI 黄了"的意外
+- **CI 行为调试**（与本库 [ai-code-evolution](../../vibe-code/experience/ai-code-evolution.md) 的 "GitHub Actions 兜底、别只信一个绿色结果" 呼应）：交付前本地跑通再推，减少"源码对但线上旧文件/CI 黄了"的意外
 - 可视化管理：官方推荐 VS Code 扩展 [GitHub Local Actions](https://sanjulaganepola.github.io/github-local-actions-docs/)
 
 ## 注意点

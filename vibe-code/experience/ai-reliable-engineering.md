@@ -27,7 +27,7 @@ Fred Brooks 早就说过：构建软件系统最困难的单一环节，就是**
 > 并发边界是多少？第三方服务挂了怎么降级？数据冲突怎么处理？
 
 直到把所有隐藏假设剥离干净，**自动落成一份清晰的产品和技术规格文档（Spec）**。
-仓库关联：[goal-mode](prompts/goal-mode.md)（验收清单驱动开发）是同一思路的轻量版，本方法论是它的大厂完整版。
+仓库关联：[goal-mode](../prompts/goal-mode.md)（验收清单驱动开发）是同一思路的轻量版，本方法论是它的大厂完整版。
 
 ## 2️⃣ 路径探索 —— 找到通往终点的路径
 
@@ -68,7 +68,7 @@ Fred Brooks 早就说过：构建软件系统最困难的单一环节，就是**
 - **后端 + 数据库交互** → 自动化的 **API 契约测试**
 - **前端 + 交互界面** → AI 不会主动写健全的 UI 自动化，必须由**人类开发者代入真实用户**，梳理关键用户流程，写一个**覆盖完整体验流程、最小可用的端到端集成验收测试（E2E Smoke Test）**，作为交付的物理硬指标
 
-> 与仓库的 [issue-style-task](prompts/issue-style-task.md)（验收驱动）、[execution-discipline](prompts/execution-discipline.md)（Review 门禁）互为补充：它们管单任务粒度，本方法论管全流程骨架。
+> 与仓库的 [issue-style-task](../prompts/issue-style-task.md)（验收驱动）、[execution-discipline](../prompts/execution-discipline.md)（Review 门禁）互为补充：它们管单任务粒度，本方法论管全流程骨架。
 
 ## 4️⃣ 总结：三环闭环
 

@@ -93,7 +93,7 @@ teamai packages install typescript@5.9.2 --npm
 ## 注意点
 - **依赖 git 仓作单一事实源**，需要成员对共享仓有写权限；私有/公司网络需确认 git 服务可达
 - 与 [archify](archify.md) / [OfficeCLI](officecli.md) 这类单机工具不同，teamai 是**团队级资源编排**——它管"团队的 Agent 配置怎么统一"，不替代具体干活工具
-- 与本库 [ai-repos](README.md) 其它条目互补：可作为团队版"skills + rules 的统一 git 分发层"
+- 与本库 [ai-repos](../README.md) 其它条目互补：可作为团队版"skills + rules 的统一 git 分发层"
 
 ## 一句话
 > teamai 把"团队怎么用 Agent"本身变成了一份可版本化、可 review、可同步的 git 资产——**让团队的默契（skills/rules/知识）像代码一样被管理和演进**。

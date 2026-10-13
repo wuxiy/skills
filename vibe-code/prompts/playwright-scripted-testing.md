@@ -134,8 +134,8 @@ Playwright 新版有 Planner / Generator / Healer 这类 Agent——那是"帮�
 
 ## 与本书库的关系
 
-- 与 [codex-skills-trio](experience/codex-skills-trio.md) 的 **agent-browser** 形成对照：agent-browser 让 Agent 用浏览器 CLI 自验，本条主张**写脚本让 runner 测**——后者更省 token、可回归。二者可结合：复杂一次性验证用 agent-browser，长期回归用 Playwright 脚本
-- 与 [ai-reliable-engineering](experience/ai-reliable-engineering.md) 的"最小可用 E2E 验收（BDD 思路）"同源——都反对 AI 为过测试硬凑代码、都强调交付硬指标；本条给出具体落地（脚本作者 vs 点击员）
-- 与 [execution-discipline](prompts/execution-discipline.md) 的 Review 门禁呼应：脚本能复现 → 就是"一个需求只动一个模块/一次做对"的可验证闭环
+- 与 [codex-skills-trio](../experience/codex-skills-trio.md) 的 **agent-browser** 形成对照：agent-browser 让 Agent 用浏览器 CLI 自验，本条主张**写脚本让 runner 测**——后者更省 token、可回归。二者可结合：复杂一次性验证用 agent-browser，长期回归用 Playwright 脚本
+- 与 [ai-reliable-engineering](../experience/ai-reliable-engineering.md) 的"最小可用 E2E 验收（BDD 思路）"同源——都反对 AI 为过测试硬凑代码、都强调交付硬指标；本条给出具体落地（脚本作者 vs 点击员）
+- 与 [execution-discipline](execution-discipline.md) 的 Review 门禁呼应：脚本能复现 → 就是"一个需求只动一个模块/一次做对"的可验证闭环
 
 > **一句话**：脚本能复现，后续修复、回归、CI 就都便宜且稳定了——让模型去写脚本，别让模型去点屏幕。
