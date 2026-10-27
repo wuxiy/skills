@@ -4,19 +4,20 @@
     "name": "wuxiy"
   },
   "metadata": {
-    "description": "Claude Code skills library by wuxiy — code review/refactor, README authoring, session retro, and skill-authoring tools",
-    "version": "0.2.0"
+    "description": "Claude Code skills library by wuxiy — code review/refactor, README authoring, plan/code review, session retro, and skill-authoring tools",
+    "version": "0.3.0"
   },
   "plugins": [
     {
       "name": "w-skills",
-      "description": "Code review/refactor, README authoring, retro, and skill-authoring tools for Claude Code",
+      "description": "Code review/refactor, README authoring, plan/code review, retro, and skill-authoring tools for Claude Code",
       "source": "./",
       "strict": false,
       "skills": [
         "./skills/w-code-refactor",
         "./skills/w-create-readme",
         "./skills/w-retro",
+        "./skills/w-review",
         "./skills/skill-creator"
       ]
     }

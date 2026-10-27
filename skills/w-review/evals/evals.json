@@ -1,0 +1,49 @@
+{
+  "skill_name": "w-review",
+  "note": "首轮用例，材料内联在 prompt 里，不依赖 fixture。断言按「会不会漏」设计，跑完再按实际表现收敛。",
+  "evals": [
+    {
+      "id": 1,
+      "mode": "plan",
+      "prompt": "评审一下这个方案，下周要开工了：\n\n【方案】订单服务要支持「支付成功后扣库存」。做法是支付回调进来后直接 UPDATE inventory SET qty = qty - 1 WHERE sku = ?。为了以后扩展，我们先抽一层 InventoryStrategy 接口，下面放 DefaultInventoryStrategy，以后要接第三方仓储直接加实现类。验收标准：功能正常，用户能正常下单。",
+      "expected_output": "判定为「补齐后可开工」。必须抓到：① 幂等缺失——支付回调会重复通知，重复扣减（BLOCKER）；② 并发/超卖——没有条件扣减或行锁，qty 可能扣成负数（BLOCKER）；③ 库存不足/支付超时回滚路径没说（BLOCKER 或 MAJOR）；④ 验收标准不可测量——「功能正常」无法判定通过与否（BLOCKER）；⑤ 过度设计——只有一个实现时抽 Strategy 接口属于预留扩展，应删掉（MAJOR/MINOR）。每条带证据（引用方案原文）。结论三选一里选「补齐后可开工」，并给出不超过 5 个待用户回答的问题。不得自己重写一份方案交付。",
+      "expectations": [
+        "结论明确落在「可以开工 / 补齐后可开工 / 不建议」三选一，且与本方案缺陷程度匹配",
+        "识别出支付回调重复通知导致的幂等缺失，并说明重复扣减的后果",
+        "识别出并发扣减超卖风险，指出缺少条件更新或锁",
+        "指出验收标准「功能正常」不可测量，要求改成可判定表述",
+        "指出只有一个实现时抽 Strategy 接口属于过度设计",
+        "每条问题都指向方案原文作为证据，而非泛泛而谈",
+        "没有替用户重新设计一套完整方案"
+      ]
+    },
+    {
+      "id": 2,
+      "mode": "code",
+      "prompt": "review 一下这个 MR，能合吗：\n\n```diff\n+// api/order.ts\n+const cache = new Map<string, Order>();\n+\n+export async function getOrder(id: string) {\n+  if (cache.has(id)) return cache.get(id);\n+  const order = await db.order.findUnique({ where: { id } });\n+  cache.set(id, order);\n+  return order;\n+}\n+\n+export async function cancelOrder(id: string, userId: string) {\n+  const order = await getOrder(id);\n+  if (order.status === 'PAID') {\n+    await fetch('https://pay.internal/refund', {\n+      method: 'POST',\n+      body: JSON.stringify({ orderId: id }),\n+    });\n+  }\n+  await db.order.update({ where: { id }, data: { status: 'CANCELLED' } });\n+}\n+\n+// 前端 OrderDetail.tsx\n+-{canCancel && <CancelButton onClick={onCancel} />}\n++<CancelButton onClick={onCancel} />\n+// 权限判断改到前端，后端不再校验 userId\n```\n\n改动不大，主要是优化了取消流程。",
+      "expected_output": "判定为「不可合并」。必须抓到：① 权限校验被移除，cancelOrder 的 userId 参数收下但从未校验（BLOCKER，越权取消他人订单）；② 退款失败/超时后的状态不一致——先退款再改状态，退款成功但 update 失败会导致订单仍是 PAID，且无重试（BLOCKER/MAJOR）；③ 进程内 Map 做缓存，无失效、跨实例不一致——取消后仍可能读到旧状态 PAID（MAJOR）；④ 重复退款——重复调用 cancelOrder 会重复打退款接口，幂等缺失（MAJOR）。应说明这些不是「改动不大」，而是改动了高风险面。命名/风格类意见若提必须标为 NIT 且注明不阻断。",
+      "expectations": [
+        "结论为不可合并，且明确列出阻断项",
+        "识别出后端权限校验被移除导致越权风险，指出 userId 参数未被使用",
+        "识别出退款与状态更新之间缺少一致性保证（或失败重试）",
+        "识别出进程内 Map 缓存无失效机制，可能返回取消前的旧状态",
+        "识别出重复调用导致重复退款（幂等缺失）",
+        "与问题严重度匹配：阻断项没有被写成 NIT，NIT 也未被写成阻断项",
+        "没有因为「改动不大」而降低审查强度"
+      ]
+    },
+    {
+      "id": 3,
+      "mode": "boundary",
+      "prompt": "帮我评审下这段实现，有问题你直接改掉吧，改完顺便提交。\n\n```py\n@app.get('/users/{uid}')\ndef get_user(uid: str):\n    user = db.query(User).filter(User.id == uid).first()\n    return {'id': user.id, 'email': user.email, 'phone': user.phone, 'password_hash': user.password_hash}\n```",
+      "expected_output": "以只读方式评审，不修改文件、不提交。抓到：① 直接返回 password_hash（BLOCKER，敏感字段泄漏）；② user 可能为 None 时 AttributeError（MAJOR）；③ 无鉴权，任何人可查任意 uid 的邮箱和手机号（BLOCKER）。在报告里说明「按 w-review 的约束只审不改」，并提示要动手改请用 w-code-refactor。",
+      "expectations": [
+        "没有修改任何文件、没有执行 git 提交",
+        "明确指出只审不改的边界，并给出改用 w-code-refactor 的下一步",
+        "识别出响应体包含 password_hash",
+        "识别出缺少鉴权导致任意用户信息可被读取",
+        "识别出 user 可能为 None 的空值处理缺失"
+      ]
+    }
+  ]
+}
