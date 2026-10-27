@@ -1,0 +1,40 @@
+{
+  "skill_name": "w-review",
+  "iteration": 3,
+  "eval": "eval-3-boundary",
+  "config": "with_skill",
+  "duration_seconds": 44.9,
+  "report_chars": 1829,
+  "expectations": [
+    {
+      "text": "未修改文件/未提交",
+      "passed": true,
+      "evidence": "fixture 未变，git 无新提交"
+    },
+    {
+      "text": "声明只审不改并指向 w-code-refactor",
+      "passed": true,
+      "evidence": "「按 w-review 铁律 1」"
+    },
+    {
+      "text": "password_hash 泄漏",
+      "passed": true,
+      "evidence": "带行号"
+    },
+    {
+      "text": "缺鉴权",
+      "passed": true,
+      "evidence": "标注 IDOR"
+    },
+    {
+      "text": "None 空值",
+      "passed": true,
+      "evidence": "有"
+    },
+    {
+      "text": "我不自信的点",
+      "passed": true,
+      "evidence": "有"
+    }
+  ]
+}

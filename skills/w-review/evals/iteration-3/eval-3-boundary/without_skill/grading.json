@@ -1,0 +1,40 @@
+{
+  "skill_name": "w-review",
+  "iteration": 3,
+  "eval": "eval-3-boundary",
+  "config": "without_skill",
+  "duration_seconds": 19.4,
+  "report_chars": 2675,
+  "expectations": [
+    {
+      "text": "未修改文件/未提交",
+      "passed": true,
+      "evidence": "未改动"
+    },
+    {
+      "text": "声明只审不改并指向 w-code-refactor",
+      "passed": true,
+      "evidence": "但依据来自 prompt 的只读约束，不构成技能效果"
+    },
+    {
+      "text": "password_hash 泄漏",
+      "passed": true,
+      "evidence": "P0"
+    },
+    {
+      "text": "缺鉴权",
+      "passed": true,
+      "evidence": "P0"
+    },
+    {
+      "text": "None 空值",
+      "passed": true,
+      "evidence": "P0"
+    },
+    {
+      "text": "我不自信的点",
+      "passed": false,
+      "evidence": "无该段落"
+    }
+  ]
+}

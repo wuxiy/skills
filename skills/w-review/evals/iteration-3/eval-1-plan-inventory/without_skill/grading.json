@@ -1,0 +1,55 @@
+{
+  "skill_name": "w-review",
+  "iteration": 3,
+  "eval": "eval-1-plan-inventory",
+  "config": "without_skill",
+  "duration_seconds": 19.8,
+  "report_chars": 1998,
+  "expectations": [
+    {
+      "text": "结论明确落在三选一",
+      "passed": true,
+      "evidence": "「不通过（需返工后开工）」"
+    },
+    {
+      "text": "识别幂等缺失",
+      "passed": true,
+      "evidence": "P0"
+    },
+    {
+      "text": "识别超卖/并发",
+      "passed": true,
+      "evidence": "P0"
+    },
+    {
+      "text": "验收标准不可测量",
+      "passed": true,
+      "evidence": "P0 末条"
+    },
+    {
+      "text": "Strategy 过度设计",
+      "passed": true,
+      "evidence": "有"
+    },
+    {
+      "text": "每条指向原文证据",
+      "passed": false,
+      "evidence": "无「证据：」锚点，多为直述"
+    },
+    {
+      "text": "未替用户重写方案",
+      "passed": true,
+      "evidence": "给修订建议，未输出替代方案"
+    },
+    {
+      "text": "领域模型缺口",
+      "passed": false,
+      "evidence": "本轮未提预占/锁定量（iteration-2 曾提到，属方差）"
+    },
+    {
+      "text": "我不自信的点",
+      "passed": false,
+      "evidence": "无该段落"
+    }
+  ]
+}

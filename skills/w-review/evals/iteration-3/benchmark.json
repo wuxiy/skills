@@ -1,0 +1,86 @@
+{
+  "skill_name": "w-review",
+  "iteration": 3,
+  "note": "eval-4 的期望值写错了：该「干净方案」实际存在真实缺陷（413 与流式响应互斥、接口鉴权≠行级可见范围），两组都正确找出，因此 eval-4 不计入通过率，其失败属 fixture 设计问题而非技能问题。token 数据本 runtime 未暴露，仅记录时长与报告字符数。",
+  "summary": [
+    {
+      "eval": "eval-1-plan-inventory",
+      "with_skill": {
+        "passed": 9,
+        "total": 9,
+        "pass_rate": 100.0,
+        "duration_s": 34.3,
+        "report_chars": 1889
+      },
+      "without_skill": {
+        "passed": 6,
+        "total": 9,
+        "pass_rate": 66.7,
+        "duration_s": 19.8,
+        "report_chars": 1998
+      }
+    },
+    {
+      "eval": "eval-2-code-mr",
+      "with_skill": {
+        "passed": 8,
+        "total": 8,
+        "pass_rate": 100.0,
+        "duration_s": 25.9,
+        "report_chars": 2380
+      },
+      "without_skill": {
+        "passed": 7,
+        "total": 8,
+        "pass_rate": 87.5,
+        "duration_s": 25.3,
+        "report_chars": 2221
+      }
+    },
+    {
+      "eval": "eval-3-boundary",
+      "with_skill": {
+        "passed": 6,
+        "total": 6,
+        "pass_rate": 100.0,
+        "duration_s": 44.9,
+        "report_chars": 1829
+      },
+      "without_skill": {
+        "passed": 5,
+        "total": 6,
+        "pass_rate": 83.3,
+        "duration_s": 19.4,
+        "report_chars": 2675
+      }
+    }
+  ],
+  "overall": {
+    "with_skill": {
+      "passed": 23,
+      "total": 23,
+      "pass_rate": 100.0,
+      "duration_s": 105.1,
+      "report_chars": 6098
+    },
+    "without_skill": {
+      "passed": 18,
+      "total": 23,
+      "pass_rate": 78.3,
+      "duration_s": 64.5,
+      "report_chars": 6894
+    }
+  },
+  "eval4_void": {
+    "with_skill": {
+      "conclusion": "补齐后可开工",
+      "blockers": 4,
+      "chars": 2053
+    },
+    "without_skill": {
+      "conclusion": "方向认可，两个阻断项",
+      "blockers": 2,
+      "chars": 1539
+    }
+  }
+}
