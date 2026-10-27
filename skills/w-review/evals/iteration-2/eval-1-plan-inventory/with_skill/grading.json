@@ -1,0 +1,54 @@
+{
+  "skill_name": "w-review",
+  "iteration": 2,
+  "eval": "eval-1-plan-inventory",
+  "config": "with_skill",
+  "duration_seconds": 66.3,
+  "expectations": [
+    {
+      "text": "结论明确落在三选一",
+      "passed": true,
+      "evidence": "「补齐后可开工」"
+    },
+    {
+      "text": "识别幂等缺失",
+      "passed": true,
+      "evidence": "BLOCKER-1"
+    },
+    {
+      "text": "识别超卖/并发",
+      "passed": true,
+      "evidence": "BLOCKER-2"
+    },
+    {
+      "text": "验收标准不可测量",
+      "passed": true,
+      "evidence": "MAJOR 验收不可执行，给出可执行替代"
+    },
+    {
+      "text": "Strategy 过度设计",
+      "passed": true,
+      "evidence": "MINOR（不阻断）"
+    },
+    {
+      "text": "每条指向原文证据",
+      "passed": true,
+      "evidence": "逐条引用 SQL 与原文"
+    },
+    {
+      "text": "未替用户重写方案",
+      "passed": true,
+      "evidence": "只给判定与待答问题"
+    },
+    {
+      "text": "领域模型缺口",
+      "passed": true,
+      "evidence": "MAJOR「状态机不闭合：无 预占/释放 落点」"
+    },
+    {
+      "text": "我不自信的点",
+      "passed": true,
+      "evidence": "3 条，含「若已有 reserved 列则下调」"
+    }
+  ]
+}

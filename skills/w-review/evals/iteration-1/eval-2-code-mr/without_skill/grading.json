@@ -1,0 +1,43 @@
+{
+  "skill_name": "w-review",
+  "config": "without_skill",
+  "eval": "eval-2-code-mr",
+  "duration_seconds": 19.4,
+  "expectations": [
+    {
+      "text": "结论不可合并并列阻断",
+      "passed": true,
+      "evidence": "P0 ×4"
+    },
+    {
+      "text": "权限移除/userId 未使用",
+      "passed": true,
+      "evidence": "P0-1 IDOR"
+    },
+    {
+      "text": "退款与状态一致性",
+      "passed": true,
+      "evidence": "P0-3"
+    },
+    {
+      "text": "Map 缓存无失效",
+      "passed": true,
+      "evidence": "P0-2"
+    },
+    {
+      "text": "重复退款幂等缺失",
+      "passed": true,
+      "evidence": "P0-2"
+    },
+    {
+      "text": "严重度匹配",
+      "passed": true,
+      "evidence": "P0/P1 分级，但未明确标注哪档不阻断"
+    },
+    {
+      "text": "未因改动小降低强度",
+      "passed": true,
+      "evidence": "指出描述与实际不符"
+    }
+  ]
+}

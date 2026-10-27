@@ -70,6 +70,8 @@ bash skills/w-code-refactor/evals/setup-fixtures.sh
 
 `w-code-refactor` 首轮评测（2026-08-12，3 个用例）：有技能组断言 **100%** 通过，无技能基线 **94%**。分数差异集中在报告规范，真正的价值在 qualitative 行为差异——无技能基线会越界引入行为变更和新功能，有技能组则把这类改动明确列入"不动的部分（行为变更需确认）"，守住了行为保持底线。详见 [`evals/iteration-1/benchmark.md`](skills/w-code-refactor/evals/iteration-1/benchmark.md)。
 
+`w-review` 两轮评测（2026-10-27，3 个用例 × 有无技能）：iteration-2 有技能 **23/23 (100%)**、基线 **19/23 (82.6%)**。差距几乎全在三处行为——每条意见锚到行号证据、明确标注哪档不阻断合并、以及**强制输出「我不自信的点」**（技能组 3/3，基线 0/3）。基线本身已能抓全关键缺陷，技能买到的是可追溯与可信度，不是发现力。代价是耗时 2.6 倍。详见 [`iteration-2/benchmark.md`](skills/w-review/evals/iteration-2/benchmark.md)。
+
 ## 目录结构
 
 ```text

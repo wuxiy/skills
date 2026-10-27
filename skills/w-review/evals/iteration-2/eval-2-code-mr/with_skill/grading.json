@@ -1,0 +1,49 @@
+{
+  "skill_name": "w-review",
+  "iteration": 2,
+  "eval": "eval-2-code-mr",
+  "config": "with_skill",
+  "duration_seconds": 35.3,
+  "expectations": [
+    {
+      "text": "结论不可合并并列阻断",
+      "passed": true,
+      "evidence": "3 BLOCKER"
+    },
+    {
+      "text": "权限移除/userId 未使用",
+      "passed": true,
+      "evidence": "引用「userId 一次未引用」"
+    },
+    {
+      "text": "退款与状态一致性",
+      "passed": true,
+      "evidence": "BLOCKER-3"
+    },
+    {
+      "text": "Map 缓存无失效",
+      "passed": true,
+      "evidence": "BLOCKER-2"
+    },
+    {
+      "text": "重复退款幂等缺失",
+      "passed": true,
+      "evidence": "BLOCKER-2/3"
+    },
+    {
+      "text": "严重度匹配",
+      "passed": true,
+      "evidence": "MINOR/NIT 明确「不阻断合并」"
+    },
+    {
+      "text": "未因改动小降低强度",
+      "passed": true,
+      "evidence": "指出「改动与提交说明不符」"
+    },
+    {
+      "text": "我不自信的点",
+      "passed": true,
+      "evidence": "4 条，每条带推翻条件"
+    }
+  ]
+}

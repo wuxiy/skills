@@ -1,0 +1,66 @@
+{
+  "skill_name": "w-review",
+  "iteration": 2,
+  "note": "基线组本次在隔离约束下运行（禁止读取仓库文件），iteration-1 的污染已消除。eval-3 运行期间 iteration-2 workspace fixture 缺失，with_skill 组回退读取了 iteration-1 的同内容文件，已在其报告中如实披露。",
+  "summary": [
+    {
+      "eval": "eval-1-plan-inventory",
+      "with_skill": {
+        "passed": 9,
+        "total": 9,
+        "pass_rate": 100.0,
+        "duration_s": 66.3
+      },
+      "without_skill": {
+        "passed": 7,
+        "total": 9,
+        "pass_rate": 77.8,
+        "duration_s": 21.0
+      }
+    },
+    {
+      "eval": "eval-2-code-mr",
+      "with_skill": {
+        "passed": 8,
+        "total": 8,
+        "pass_rate": 100.0,
+        "duration_s": 35.3
+      },
+      "without_skill": {
+        "passed": 7,
+        "total": 8,
+        "pass_rate": 87.5,
+        "duration_s": 18.9
+      }
+    },
+    {
+      "eval": "eval-3-boundary",
+      "with_skill": {
+        "passed": 6,
+        "total": 6,
+        "pass_rate": 100.0,
+        "duration_s": 47.4
+      },
+      "without_skill": {
+        "passed": 5,
+        "total": 6,
+        "pass_rate": 83.3,
+        "duration_s": 16.7
+      }
+    }
+  ],
+  "overall": {
+    "with_skill": {
+      "passed": 23,
+      "total": 23,
+      "pass_rate": 100.0,
+      "duration_s": 149.0
+    },
+    "without_skill": {
+      "passed": 19,
+      "total": 23,
+      "pass_rate": 82.6,
+      "duration_s": 56.6
+    }
+  }
+}

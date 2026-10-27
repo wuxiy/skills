@@ -1,0 +1,33 @@
+{
+  "skill_name": "w-review",
+  "config": "with_skill",
+  "eval": "eval-3-boundary",
+  "duration_seconds": 38.1,
+  "expectations": [
+    {
+      "text": "未修改文件/未提交",
+      "passed": true,
+      "evidence": "文件 mtime 未变，git log 无新提交"
+    },
+    {
+      "text": "声明只审不改并指向 w-code-refactor",
+      "passed": true,
+      "evidence": "开头引用块明确说明"
+    },
+    {
+      "text": "password_hash 泄漏",
+      "passed": true,
+      "evidence": "BLOCKER-1 带行号"
+    },
+    {
+      "text": "缺鉴权",
+      "passed": true,
+      "evidence": "BLOCKER-2"
+    },
+    {
+      "text": "None 空值",
+      "passed": true,
+      "evidence": "MAJOR-3"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "skill_name": "w-review",
+  "iteration": 1,
+  "note": "baseline 存在上下文污染：无技能组在 eval-3 仍主动引用 w-review 约束与 w-code-refactor，说明它读到了仓库/技能上下文。该组 with vs without 的差异不可作为技能效果证据。",
+  "summary": [
+    {
+      "eval": "eval-1-plan-inventory",
+      "with_skill": {
+        "passed": 7,
+        "total": 7,
+        "pass_rate": 100.0,
+        "duration_s": 48.0
+      },
+      "without_skill": {
+        "passed": 6,
+        "total": 7,
+        "pass_rate": 85.7,
+        "duration_s": 68.4
+      }
+    },
+    {
+      "eval": "eval-2-code-mr",
+      "with_skill": {
+        "passed": 7,
+        "total": 7,
+        "pass_rate": 100.0,
+        "duration_s": 40.1
+      },
+      "without_skill": {
+        "passed": 7,
+        "total": 7,
+        "pass_rate": 100.0,
+        "duration_s": 19.4
+      }
+    },
+    {
+      "eval": "eval-3-boundary",
+      "with_skill": {
+        "passed": 5,
+        "total": 5,
+        "pass_rate": 100.0,
+        "duration_s": 38.1
+      },
+      "without_skill": {
+        "passed": 5,
+        "total": 5,
+        "pass_rate": 100.0,
+        "duration_s": 30.2
+      }
+    }
+  ],
+  "overall": {
+    "with_skill": {
+      "passed": 19,
+      "total": 19,
+      "pass_rate": 100.0,
+      "duration_s": 126.19999999999999
+    },
+    "without_skill": {
+      "passed": 18,
+      "total": 19,
+      "pass_rate": 94.7,
+      "duration_s": 118.00000000000001
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "skill_name": "w-review",
+  "config": "with_skill",
+  "eval": "eval-2-code-mr",
+  "duration_seconds": 40.1,
+  "expectations": [
+    {
+      "text": "结论不可合并并列阻断",
+      "passed": true,
+      "evidence": "4 条 BLOCKER"
+    },
+    {
+      "text": "权限移除/userId 未使用",
+      "passed": true,
+      "evidence": "BLOCKER-1 引用 diff 注释"
+    },
+    {
+      "text": "退款与状态一致性",
+      "passed": true,
+      "evidence": "BLOCKER-3"
+    },
+    {
+      "text": "Map 缓存无失效",
+      "passed": true,
+      "evidence": "BLOCKER-2"
+    },
+    {
+      "text": "重复退款幂等缺失",
+      "passed": true,
+      "evidence": "BLOCKER-2/4"
+    },
+    {
+      "text": "严重度匹配",
+      "passed": true,
+      "evidence": "MINOR 明确标注「不阻断合并」"
+    },
+    {
+      "text": "未因改动小降低强度",
+      "passed": true,
+      "evidence": "开篇即指出「不是优化，而是删掉鉴权」"
+    }
+  ]
+}

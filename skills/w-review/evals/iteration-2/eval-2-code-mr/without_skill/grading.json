@@ -1,0 +1,49 @@
+{
+  "skill_name": "w-review",
+  "iteration": 2,
+  "eval": "eval-2-code-mr",
+  "config": "without_skill",
+  "duration_seconds": 18.9,
+  "expectations": [
+    {
+      "text": "结论不可合并并列阻断",
+      "passed": true,
+      "evidence": "P0 ×3"
+    },
+    {
+      "text": "权限移除/userId 未使用",
+      "passed": true,
+      "evidence": "P0-1"
+    },
+    {
+      "text": "退款与状态一致性",
+      "passed": true,
+      "evidence": "P0-3"
+    },
+    {
+      "text": "Map 缓存无失效",
+      "passed": true,
+      "evidence": "P0-2"
+    },
+    {
+      "text": "重复退款幂等缺失",
+      "passed": true,
+      "evidence": "P0-2"
+    },
+    {
+      "text": "严重度匹配",
+      "passed": true,
+      "evidence": "P0/P1/P2 分级"
+    },
+    {
+      "text": "未因改动小降低强度",
+      "passed": true,
+      "evidence": "「方向没错但风险不可接受」"
+    },
+    {
+      "text": "我不自信的点",
+      "passed": false,
+      "evidence": "无该段落"
+    }
+  ]
+}

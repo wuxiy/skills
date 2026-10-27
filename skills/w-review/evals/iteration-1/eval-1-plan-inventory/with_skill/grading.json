@@ -1,0 +1,43 @@
+{
+  "skill_name": "w-review",
+  "config": "with_skill",
+  "eval": "eval-1-plan-inventory",
+  "duration_seconds": 48.0,
+  "expectations": [
+    {
+      "text": "结论明确落在三选一",
+      "passed": true,
+      "evidence": "「补齐后可开工」"
+    },
+    {
+      "text": "识别幂等缺失",
+      "passed": true,
+      "evidence": "BLOCKER-1 引用原文并说明重试N次扣N件"
+    },
+    {
+      "text": "识别超卖/并发",
+      "passed": true,
+      "evidence": "BLOCKER-2 指出缺少 AND qty>=1 与锁"
+    },
+    {
+      "text": "验收标准不可测量",
+      "passed": true,
+      "evidence": "BLOCKER-4 并给出可判定替代"
+    },
+    {
+      "text": "Strategy 过度设计",
+      "passed": true,
+      "evidence": "MAJOR-1 用奥卡姆自检"
+    },
+    {
+      "text": "每条指向原文证据",
+      "passed": true,
+      "evidence": "3 条 BLOCKER 均引用原文语句"
+    },
+    {
+      "text": "未替用户重写方案",
+      "passed": true,
+      "evidence": "只给判定标准与待答问题，未输出替代方案"
+    }
+  ]
+}
