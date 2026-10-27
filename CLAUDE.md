@@ -1,10 +1,10 @@
 # CLAUDE.md
 
-Claude Code marketplace plugin: a skills library plus vibe-code knowledge (`cywu-skills`) by wuxiy. Version: **0.1.0**.
+Claude Code marketplace plugin: a skills library plus vibe-code knowledge (`w-skills`) by wuxiy. Version: **0.2.0**.
 
 ## Architecture
 
-Skills live at the repo root under `skills/<name>/` and are exposed through the single `cywu-skills` plugin defined in [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) (plugin metadata, version, and skill paths). This is a **distribution layout** — skills are NOT under `.claude/skills/` here; that path is a project-local install target, not the library layout.
+Skills live at the repo root under `skills/<name>/` and are exposed through the single `w-skills` plugin defined in [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) (plugin metadata, version, and skill paths). This is a **distribution layout** — skills are NOT under `.claude/skills/` here; that path is a project-local install target, not the library layout.
 
 Each skill is self-contained: `SKILL.md` (YAML frontmatter + docs) plus optional `references/`, `scripts/`, `evals/`.
 
@@ -12,8 +12,8 @@ Each skill is self-contained: `SKILL.md` (YAML frontmatter + docs) plus optional
 
 | Skill | Purpose |
 |-------|---------|
-| **cywu-code-refactor** | Post-implementation review + refactor. Two modes: `full` (review a just-finished feature for duplicated logic / design / UI consistency / performance, then refactor) and `cleanup` (re-review a stack of fix patches, consolidate into the optimal solution). Guardrails: behavior preservation, verify every step, small reversible commits. |
-| **cywu-create-readme** | Author a project's README: read the codebase to establish what the project is and how it runs, pick a structure by project type, then verify every command / path / badge actually exists. Accuracy over polish; GFM + GitHub admonitions. Ships `references/structure.md` (type-specific skeletons) and `references/inspiration/` (4 attributed MIT reference READMEs). |
+| **w-code-refactor** | Post-implementation review + refactor. Two modes: `full` (review a just-finished feature for duplicated logic / design / UI consistency / performance, then refactor) and `cleanup` (re-review a stack of fix patches, consolidate into the optimal solution). Guardrails: behavior preservation, verify every step, small reversible commits. |
+| **w-create-readme** | Author a project's README: read the codebase to establish what the project is and how it runs, pick a structure by project type, then verify every command / path / badge actually exists. Accuracy over polish; GFM + GitHub admonitions. Ships `references/structure.md` (type-specific skeletons) and `references/inspiration/` (4 attributed MIT reference READMEs). |
 | **skill-creator** | Vendored from [anthropics/skills](https://github.com/anthropics/skills) (MIT). Author, modify, evaluate, and benchmark skills. |
 
 ## Vibe Code 经验与技巧
@@ -43,14 +43,14 @@ Each skill under `skills/` is distributed and consumed independently — the fol
 Skills with an `evals/` directory ship test cases and fixture projects. Fixtures that contain their own git history are gitignored and must be regenerated:
 
 ```bash
-bash skills/<skill>/evals/setup-fixtures.sh   # e.g. skills/cywu-code-refactor/evals
+bash skills/<skill>/evals/setup-fixtures.sh   # e.g. skills/w-code-refactor/evals
 ```
 
 Eval evidence (benchmark summaries, grading, reports) under `evals/iteration-N/` is committed; the bulky refactored project copies under `**/outputs/work/` and regenerated `fixtures/` are gitignored.
 
 ## Adding New Skills
 
-All skills MUST use the `cywu-` prefix. Full guide: [docs/creating-skills.md](docs/creating-skills.md).
+All skills MUST use the `w-` prefix. Full guide: [docs/creating-skills.md](docs/creating-skills.md).
 
 ## Reference Docs
 

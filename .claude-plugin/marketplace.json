@@ -1,21 +1,22 @@
 {
-  "name": "cywu-skills",
+  "name": "w-skills",
   "owner": {
     "name": "wuxiy"
   },
   "metadata": {
-    "description": "Claude Code skills library by wuxiy — code review/refactor, README authoring, and skill-authoring tools",
-    "version": "0.1.0"
+    "description": "Claude Code skills library by wuxiy — code review/refactor, README authoring, session retro, and skill-authoring tools",
+    "version": "0.2.0"
   },
   "plugins": [
     {
-      "name": "cywu-skills",
-      "description": "Code review/refactor, README authoring, and skill-authoring tools for Claude Code",
+      "name": "w-skills",
+      "description": "Code review/refactor, README authoring, retro, and skill-authoring tools for Claude Code",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/cywu-code-refactor",
-        "./skills/cywu-create-readme",
+        "./skills/w-code-refactor",
+        "./skills/w-create-readme",
+        "./skills/w-retro",
         "./skills/skill-creator"
       ]
     }

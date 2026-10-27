@@ -1,5 +1,5 @@
 ---
-name: cywu-code-refactor
+name: w-code-refactor
 description: >-
   This skill should be used when the user asks to "重构", "优化代码", "review 一下再重构",
   "提升代码质量", "重复逻辑", "设计问题", "UI是否一致", "性能瓶颈", "补丁叠补丁",
@@ -138,8 +138,8 @@ Concrete `AskUserQuestion` references below are examples — substitute the loca
 
 | 优先级 | 路径 | 作用域 |
 |--------|------|--------|
-| 1 | `.cywu-skills/cywu-code-refactor/EXTEND.md` | 项目 |
-| 2 | `$HOME/.cywu-skills/cywu-code-refactor/EXTEND.md` | 用户主目录 |
+| 1 | `.w-skills/w-code-refactor/EXTEND.md` | 项目 |
+| 2 | `$HOME/.w-skills/w-code-refactor/EXTEND.md` | 用户主目录 |
 
 找到则读取并应用（可配置：默认 base 分支、跳过的 review 维度、commit 前缀风格、默认修复优先级阈值等）；未找到则直接用内置默认值继续，不打断用户。
 

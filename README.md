@@ -1,4 +1,4 @@
-# cywu-skills
+# w-skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
@@ -21,7 +21,7 @@
 
 ```text
 /plugin marketplace add wuxiy/skills
-/plugin install cywu-skills
+/plugin install w-skills
 ```
 
 **只装某一个技能**——把 `skills/<skill-name>/` 复制到项目的 `.claude/skills/`，或用户级 `~/.claude/skills/` 即可（技能自包含，可独立分发）。
@@ -30,11 +30,12 @@
 
 | Skill | 说明 |
 |-------|------|
-| **cywu-code-refactor** | 需求开发完成后的 review + 重构。两种模式：`full`（审查刚完成功能的重复逻辑 / 设计 / UI 一致性 / 性能后重构）与 `cleanup`（复盘几轮补丁式修改，收敛成最优解）。守住三条底线：行为保持、步步验证、小步可退。 |
-| **cywu-create-readme** | 为项目撰写 README：先通读代码库搞清"是什么、怎么跑"，再按项目类型选结构起草，最后逐条核实命令 / 路径 / 徽章真实存在。准确优先于漂亮，输出 GFM + GitHub admonition。 |
+| **w-code-refactor** | 需求开发完成后的 review + 重构。两种模式：`full`（审查刚完成功能的重复逻辑 / 设计 / UI 一致性 / 性能后重构）与 `cleanup`（复盘几轮补丁式修改，收敛成最优解）。守住三条底线：行为保持、步步验证、小步可退。 |
+| **w-create-readme** | 为项目撰写 README：先通读代码库搞清"是什么、怎么跑"，再按项目类型选结构起草，最后逐条核实命令 / 路径 / 徽章真实存在。准确优先于漂亮，输出 GFM + GitHub admonition。 |
+| **w-retro** | 复盘历史会话，找出阻碍 AI 工作的卡点；同时是「安全读取超长会话 / 日志」的标准姿势（分页、落盘、grep 定位、压缩后读存档不重跑）。默认只读，结论先 review 再决定是否写入。 |
 | **skill-creator** | 技能创作与评测工具，vendored 自 [anthropics/skills](https://github.com/anthropics/skills)（MIT）。 |
 
-**触发示例**：`重构一下以上实现` · `看看是不是补丁叠补丁式的修改` · `给这个项目写个 README`
+**触发示例**：`重构一下以上实现` · `看看是不是补丁叠补丁式的修改` · `给这个项目写个 README` · `复盘一下最近的聊天记录`
 
 ## 知识库
 
@@ -63,33 +64,34 @@
 带 `evals/` 的技能附带测试用例与 fixture 项目。需要 git 历史的 fixture 被 gitignore，用脚本再生：
 
 ```bash
-bash skills/cywu-code-refactor/evals/setup-fixtures.sh
+bash skills/w-code-refactor/evals/setup-fixtures.sh
 ```
 
-`cywu-code-refactor` 首轮评测（2026-08-12，3 个用例）：有技能组断言 **100%** 通过，无技能基线 **94%**。分数差异集中在报告规范，真正的价值在 qualitative 行为差异——无技能基线会越界引入行为变更和新功能，有技能组则把这类改动明确列入"不动的部分（行为变更需确认）"，守住了行为保持底线。详见 [`evals/iteration-1/benchmark.md`](skills/cywu-code-refactor/evals/iteration-1/benchmark.md)。
+`w-code-refactor` 首轮评测（2026-08-12，3 个用例）：有技能组断言 **100%** 通过，无技能基线 **94%**。分数差异集中在报告规范，真正的价值在 qualitative 行为差异——无技能基线会越界引入行为变更和新功能，有技能组则把这类改动明确列入"不动的部分（行为变更需确认）"，守住了行为保持底线。详见 [`evals/iteration-1/benchmark.md`](skills/w-code-refactor/evals/iteration-1/benchmark.md)。
 
 ## 目录结构
 
 ```text
-cywu-skills/
-├── .claude-plugin/marketplace.json   # 插件注册（技能在此登记）
-├── docs/creating-skills.md           # 新增技能指南
-├── skills/                           # 可安装技能
-│   ├── cywu-code-refactor/           # SKILL.md + references/ + evals/
-│   ├── cywu-create-readme/           # SKILL.md + references/（结构骨架 + 参考 README）
-│   └── skill-creator/                # vendored 创作工具
-├── vibe-code/                        # 经验技巧库（README 含场景导览）
-│   ├── prompts/                      # 模板与规则：需求对齐 / 执行纪律 / 设计克制 / commit 规范
-│   └── experience/                   # 实战：代码质量 / 上下文管理 / 前端体验 / Codex 生态
-├── ai-repos/                         # AI 时代实用仓库收录
-│   └── repos/                        # 每仓一篇
+w-skills/
+├── .claude-plugin/marketplace.json  # 插件注册（技能在此登记）
+├── docs/creating-skills.md          # 新增技能指南
+├── skills/                          # 可安装技能
+│   ├── w-code-refactor/             # SKILL.md + references/ + evals/
+│   ├── w-create-readme/             # SKILL.md + references/（结构骨架 + 参考 README）
+│   ├── w-retro/                     # SKILL.md（复盘 + 长内容安全读取）
+│   └── skill-creator/               # vendored 创作工具
+├── vibe-code/                       # 经验技巧库（README 含场景导览）
+│   ├── prompts/                     # 模板与规则：需求对齐 / 执行纪律 / 设计克制 / commit 规范
+│   └── experience/                  # 实战：代码质量 / 上下文管理 / 前端体验 / Codex 生态
+├── ai-repos/                        # AI 时代实用仓库收录
+│   └── repos/                       # 每仓一篇
 ├── CLAUDE.md
 └── README.md
 ```
 
 ## 新增技能
 
-技能必须使用 `cywu-` 前缀（`skill-creator` 为 vendored 例外），并登记到 [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json)。完整规范见 [docs/creating-skills.md](docs/creating-skills.md)。
+技能必须使用 `w-` 前缀（`skill-creator` 为 vendored 例外），并登记到 [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json)。完整规范见 [docs/creating-skills.md](docs/creating-skills.md)。
 
 ---
 

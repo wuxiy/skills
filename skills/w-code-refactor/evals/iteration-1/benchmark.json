@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "skill_name": "cywu-code-refactor",
-    "skill_path": "/Users/wuxi/workspace/cywu/cywu-skills/.claude/skills/cywu-code-refactor",
+    "skill_name": "w-code-refactor",
+    "skill_path": "/Users/wuxi/workspace/cywu/w-skills/.claude/skills/w-code-refactor",
     "executor_model": "claude (session model, 6 parallel subagents)",
     "analyzer_model": "claude (session)",
     "timestamp": "2026-08-12T10:23:55Z",

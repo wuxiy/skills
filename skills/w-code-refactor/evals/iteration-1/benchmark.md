@@ -1,4 +1,4 @@
-# Skill Benchmark: cywu-code-refactor
+# Skill Benchmark: w-code-refactor
 
 **Model**: claude (session model, 6 parallel subagents)
 **Date**: 2026-08-12T10:23:55Z

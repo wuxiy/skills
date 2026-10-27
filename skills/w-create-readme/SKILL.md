@@ -1,5 +1,5 @@
 ---
-name: cywu-create-readme
+name: w-create-readme
 description: >-
   This skill should be used when the user asks to 写 README、生成 README、补一个 README、
   完善/更新项目说明、「README 帮我写一下」、「给这个项目写个说明文档」、"create a readme"、

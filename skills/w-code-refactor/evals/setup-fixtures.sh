@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Regenerate the two eval fixture projects (todo-app, discount-calc).
 # These are gitignored (they contain nested .git); run after a fresh clone to make
-# the evals in ../cywu-code-refactor/evals/evals.json reproducible.
+# the evals in ../w-code-refactor/evals/evals.json reproducible.
 #   Usage: bash setup-fixtures.sh
 set -euo pipefail
 

@@ -1,13 +1,13 @@
 # Creating New Skills
 
-How to add a skill to `cywu-skills`. Adapted from the conventions used by [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills), right-sized for this library.
+How to add a skill to `w-skills`. Adapted from the conventions used by [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills), right-sized for this library.
 
 ## Key Requirements
 
 | Requirement | Details |
 |-------------|---------|
 | **Location** | `skills/<name>/` at the repo root (NOT `.claude/skills/` — that's a project-local install path, not the library layout) |
-| **Prefix** | All skills MUST use the `cywu-` prefix (e.g. `cywu-code-refactor`) |
+| **Prefix** | All skills MUST use the `w-` prefix (e.g. `w-code-refactor`) |
 | **`name` field** | Max 64 chars, lowercase letters/numbers/hyphens only; no `anthropic`/`claude` |
 | **`description`** | Max 1024 chars, third person, include **what** it does **and when** to use it. List concrete trigger phrases (both Chinese and English where relevant). Slightly "pushy" to counter Claude's tendency to under-trigger |
 | **SKILL.md body** | Keep under ~500 lines; push detail into `references/` (one level deep) |
@@ -17,7 +17,7 @@ How to add a skill to `cywu-skills`. Adapted from the conventions used by [JimLi
 
 ```yaml
 ---
-name: cywu-<name>
+name: w-<name>
 description: >-
   <Third-person description. What it does + when to use it, including trigger phrases.>
 version: <semver>
@@ -27,7 +27,7 @@ version: <semver>
 ## Directory Layout
 
 ```
-skills/cywu-<name>/
+skills/w-<name>/
 ├── SKILL.md              # Main instructions (<500 lines)
 ├── references/           # Optional: detail loaded as needed (one level deep)
 ├── scripts/              # Optional: executable code for deterministic tasks
@@ -41,7 +41,7 @@ skills/cywu-<name>/
 
 ## Steps
 
-1. `mkdir skills/cywu-<name>` and write `SKILL.md` with frontmatter
+1. `mkdir skills/w-<name>` and write `SKILL.md` with frontmatter
 2. Add `references/` for any section that would push SKILL.md past ~500 lines
 3. Add `scripts/` if the skill needs deterministic code (note runtime in SKILL.md)
 4. (Optional) Author evals with the `skill-creator` skill: `evals/evals.json` + fixtures; commit `setup-fixtures.sh`, the grader, and iteration evidence; gitignore regenerated fixtures and bulky `outputs/work/` copies
