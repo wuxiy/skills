@@ -9,7 +9,7 @@
 | 目录 | 内容 | 使用方式 |
 |------|------|----------|
 | [`skills/`](skills/) | 可安装技能（技能包） | 走 plugin 加载，装进 Claude Code 后用 `/` 或自然语言触发 |
-| [`vibe-code/`](vibe-code/README.md) | prompt 模板 + 实战经验（11 篇模板 / 12 篇经验） | **纯文档**，直接读、直接复制到任意 AI 会话，不经插件加载 |
+| [`vibe-code/`](vibe-code/README.md) | prompt 模板 + 实战经验（12 篇模板 / 12 篇经验） | **纯文档**，直接读、直接复制到任意 AI 会话，不经插件加载 |
 | [`ai-repos/`](ai-repos/README.md) | 第三方实用仓库收录（6 个） | 纯文档，每个仓库一篇：定位 / 安装 / 用法 / 效果 / 注意点 |
 
 > [!TIP]
@@ -52,8 +52,9 @@
 | 界面丑、没呼吸感 | design-restraint · ai-ui-styling · perceived-performance |
 | 我给 AI 写了功能要验证 | business-testing-rules · playwright-scripted-testing |
 | 想建立 Agent 工作哲学 | eight-agent-principles（8 原则，每点可直接粘贴给 Agent） |
+| 概念读不懂 / 讲不清 | concept-fable（寓言讲透研究生级概念） |
 
-- **prompts/**（11 篇）：需求对齐 / 执行纪律 / 设计方向 / 工程规范
+- **prompts/**（12 篇）：需求对齐 / 执行纪律 / 设计方向 / 工程规范 / 概念理解
 - **experience/**（12 篇）：代码质量与架构 / 上下文与知识管理 / 前端体验与设计 / 工作流与 Codex 生态
 
 ### ai-repos/ —— 实用仓库收录
@@ -85,7 +86,7 @@ w-skills/
 │   ├── w-review/                    # SKILL.md + references/（方案评审 + 代码 review）
 │   └── skill-creator/               # vendored 创作工具
 ├── vibe-code/                       # 经验技巧库（README 含场景导览）
-│   ├── prompts/                     # 模板与规则：需求对齐 / 执行纪律 / 设计克制 / commit 规范
+│   ├── prompts/                     # 模板与规则：需求对齐 / 执行纪律 / 设计克制 / commit 规范 / 概念理解
 │   └── experience/                  # 实战：代码质量 / 上下文管理 / 前端体验 / Codex 生态
 ├── ai-repos/                        # AI 时代实用仓库收录
 │   └── repos/                       # 每仓一篇

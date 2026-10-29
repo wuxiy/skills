@@ -12,6 +12,7 @@
 | 界面丑、没呼吸感 | [design-restraint](prompts/design-restraint.md) · [ai-ui-styling](experience/ai-ui-styling.md) · [perceived-performance](experience/perceived-performance.md) |
 | 上下文爆掉、配置不稳 | [context-management](experience/context-management.md) · [codex-team-and-iteration](experience/codex-team-and-iteration.md) |
 | 想搭完整 AI 工程流水线 | [ai-reliable-engineering](experience/ai-reliable-engineering.md) · [agent-friendly-workflow](experience/agent-friendly-workflow.md)（E2E 环境 + Review）· [codex-skills-trio](experience/codex-skills-trio.md) |
+| 概念读不懂 / 讲不清 | [concept-fable](prompts/concept-fable.md)（寓言讲透研究生级概念） |
 | 想建立 Agent 工作哲学 | [eight-agent-principles](experience/eight-agent-principles.md)（8 原则）· [ai-coding-operator-principles](experience/ai-coding-operator-principles.md)（质量跟操控者走，Joway 7 条） |
 | 我给 AI 写了功能/修了 bug 要验证 | [business-testing-rules](prompts/business-testing-rules.md)（测试该怎么写）· [playwright-scripted-testing](prompts/playwright-scripted-testing.md)（别让 AI 点页面，让它写脚本）· [codex-skills-trio](experience/codex-skills-trio.md)（agent-browser） |
 
@@ -47,6 +48,12 @@
 |------|------|
 | [refactor-agents.md](prompts/refactor-agents.md) | 按渐进式披露原则重构 AGENTS.md，把大而全的指令拆成根文件 + 分类文件。 |
 | [commit-message.md](prompts/commit-message.md) | Commit Message 规范（WHY 化）：大改动补 why Body、极重要的补 Decision 块，可写入 AGENTS.md/CLAUDE.md。 |
+
+### 📖 概念理解与表达
+
+| 模板 | 用途 |
+|------|------|
+| [concept-fable.md](prompts/concept-fable.md) | 概念寓言（Amanda Askell）：挑一个研究生级概念，先写寓言、结尾才揭晓，再逐条对照隐喻。治"百科腔解释"与"以为自己懂了"。 |
 
 ## experience/ — 实战经验
 
