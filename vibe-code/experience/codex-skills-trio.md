@@ -83,6 +83,8 @@ npx skills add https://github.com/multica-ai/andrej-karpathy-skills --skill karp
 > 使用 karpathy-guidelines 修复这个 Bug。只修改完成任务必要的文件。不进行顺手重构。不增加没有要求的功能。先复现问题，修改后运行相关测试验证。
 
 > 与本库 [convergence-review](../prompts/convergence-review.md)（最终行为最小改动）、[execution-discipline](../prompts/execution-discipline.md)（禁止过度设计）高度同源，可互为印证。
+>
+> **完整版见 [prompts/karpathy-guidelines.md](../prompts/karpathy-guidelines.md)**——中文改写 + 可直接粘贴的规则块 + 逐条判据 + 与本库其它条目的关系。本段只保留速览。
 
 ## 04｜三个一起用：分阶段闭环
 

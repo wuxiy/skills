@@ -7,7 +7,7 @@
 | 想解决 | 先看 |
 |--------|------|
 | 需求说不清、AI 抢跑 | [goal-mode](prompts/goal-mode.md) · [reckoning-first](prompts/reckoning-first.md) · [issue-style-task](prompts/issue-style-task.md) |
-| AI 乱改乱加、堆屎山 | [execution-discipline](prompts/execution-discipline.md) · [convergence-review](prompts/convergence-review.md) · [karpathy-guidelines](experience/codex-skills-trio.md) |
+| AI 乱改乱加、堆屎山 | [execution-discipline](prompts/execution-discipline.md) · [convergence-review](prompts/convergence-review.md) · [karpathy-guidelines](prompts/karpathy-guidelines.md) |
 | 代码腐化、长任务失控 | [ai-code-evolution](experience/ai-code-evolution.md) · [module-split-by-change](experience/module-split-by-change.md) · [git-knowledge-loop](experience/git-knowledge-loop.md) |
 | 界面丑、没呼吸感 | [design-restraint](prompts/design-restraint.md) · [ai-ui-styling](experience/ai-ui-styling.md) · [perceived-performance](experience/perceived-performance.md) |
 | 上下文爆掉、配置不稳 | [context-management](experience/context-management.md) · [codex-team-and-iteration](experience/codex-team-and-iteration.md) |
@@ -32,6 +32,7 @@
 | 模板 | 用途 |
 |------|------|
 | [execution-discipline.md](prompts/execution-discipline.md) | 执行纪律：按 PRD 拆单落盘、主 Agent 串行(禁分支/并行)、每条 Codex Review 门禁(最多3遍)、禁止过度设计。 |
+| [karpathy-guidelines.md](prompts/karpathy-guidelines.md) | Karpathy 四条编码纪律（先想再写 / 简单优先 / 外科手术式改动 / 目标驱动执行），整段可粘进 CLAUDE.md / AGENTS.md。治「改 A 顺手重构 B」「修 bug 加三个抽象层」「说做完了但没法验证」。 |
 | [convergence-review.md](prompts/convergence-review.md) | 「多轮修改后的收敛复核」强制规则：治 AI 改 bug 留下临时分支/兜底/死代码的屎山，可写入 AGENTS.md/CLAUDE.md。 |
 | [playwright-scripted-testing.md](prompts/playwright-scripted-testing.md) | 让 Agent 写 Playwright 脚本而非自己点页面：Agent=脚本作者,runner=执行。省 token、可回归,规则贴 AGENTS.md/CLAUDE.md。 |
 | [business-testing-rules.md](prompts/business-testing-rules.md) | 业务项目怎么写测试 6 条：测行为不测实现 / 先 BDD 场景 / 禁 mock / 重 E2E 分级 / 盯失败路径 / 规则写成 lint。治 AI 写的脆弱测试。 |
@@ -87,7 +88,7 @@
 | [ai-coding-operator-principles.md](experience/ai-coding-operator-principles.md) | AI Coding 操控者原则（Joway 7 条）：质量高于速度、巴菲特Skill判断、少命令多提问(哪些)、控制设计不控代码、选择性兼容、AI Review 人工过滤、保持勤奋。 |
 | [agent-friendly-workflow.md](experience/agent-friendly-workflow.md) | Agent 友好工作流（黄同学）：5 个思维快捷键 Prompt(第一性原理/对抗审查/消融/奥卡姆/高内聚)、日常六步流、Agent 友好端到端测试环境(四件事+CLI化)、Review 四条。 |
 | [ai-reliable-engineering.md](experience/ai-reliable-engineering.md) | AI 可靠系统工程三环：目标对齐(苏格拉底式需求获取) / 路径探索(四维权衡+probe+ADR) / 循迹前行(变更追溯+最小E2E验收)。 |
-| [codex-skills-trio.md](experience/codex-skills-trio.md) | Codex 三件套 Skills：planning-with-files(长任务外部记忆) / karpathy-guidelines(约束别乱改) / agent-browser(写完自验网页) + 适用场景与第三方 Skill 避坑。 |
+| [codex-skills-trio.md](experience/codex-skills-trio.md) | Codex 三件套 Skills：planning-with-files(长任务外部记忆) / karpathy-guidelines(约束别乱改，完整版见 [prompts/karpathy-guidelines.md](prompts/karpathy-guidelines.md)) / agent-browser(写完自验网页) + 适用场景与第三方 Skill 避坑。 |
 | [codex-config.md](experience/codex-config.md) | Codex 5.6 专业设置：固定模型 + Reasoning Effort、任务 Profile、项目级配置、Lifecycle Hooks。 |
 | [best-practices.md](experience/best-practices.md) | AI 编码工作流最佳实践：`/better-harness`、业务术语表。 |
 
