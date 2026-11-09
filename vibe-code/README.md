@@ -13,6 +13,7 @@
 | 上下文爆掉、配置不稳 | [context-management](experience/context-management.md) · [codex-team-and-iteration](experience/codex-team-and-iteration.md) |
 | 想搭完整 AI 工程流水线 | [ai-reliable-engineering](experience/ai-reliable-engineering.md) · [agent-friendly-workflow](experience/agent-friendly-workflow.md)（E2E 环境 + Review）· [codex-skills-trio](experience/codex-skills-trio.md) |
 | 概念读不懂 / 讲不清 | [concept-fable](prompts/concept-fable.md)（寓言讲透研究生级概念） |
+| 想把经验抄给团队 / 带新人 | [best-practices](experience/best-practices.md)（20 条总纲 + 可粘贴版） |
 | 想建立 Agent 工作哲学 | [eight-agent-principles](experience/eight-agent-principles.md)（8 原则）· [ai-coding-operator-principles](experience/ai-coding-operator-principles.md)（质量跟操控者走，Joway 7 条） |
 | 我给 AI 写了功能/修了 bug 要验证 | [business-testing-rules](prompts/business-testing-rules.md)（测试该怎么写）· [playwright-scripted-testing](prompts/playwright-scripted-testing.md)（别让 AI 点页面，让它写脚本）· [codex-skills-trio](experience/codex-skills-trio.md)（agent-browser） |
 
@@ -90,7 +91,7 @@
 | [ai-reliable-engineering.md](experience/ai-reliable-engineering.md) | AI 可靠系统工程三环：目标对齐(苏格拉底式需求获取) / 路径探索(四维权衡+probe+ADR) / 循迹前行(变更追溯+最小E2E验收)。 |
 | [codex-skills-trio.md](experience/codex-skills-trio.md) | Codex 三件套 Skills：planning-with-files(长任务外部记忆) / karpathy-guidelines(约束别乱改，完整版见 [prompts/karpathy-guidelines.md](prompts/karpathy-guidelines.md)) / agent-browser(写完自验网页) + 适用场景与第三方 Skill 避坑。 |
 | [codex-config.md](experience/codex-config.md) | Codex 5.6 专业设置：固定模型 + Reasoning Effort、任务 Profile、项目级配置、Lifecycle Hooks。 |
-| [best-practices.md](experience/best-practices.md) | AI 编码工作流最佳实践：`/better-harness`、业务术语表。 |
+| [best-practices.md](experience/best-practices.md) | **总纲：AI 编码 20 条规则**，按需求 / 规则 / 编码 / 排查 / 审查 / 发布 / 复盘六段排布，含可整段粘贴进 AGENTS.md 的精简版。附 `/better-harness`、业务术语表两个日常动作。 |
 
 ## 相关板块
 
