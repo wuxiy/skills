@@ -9,6 +9,7 @@
 | 需求说不清、AI 抢跑 | [goal-mode](prompts/goal-mode.md) · [reckoning-first](prompts/reckoning-first.md) · [issue-style-task](prompts/issue-style-task.md) |
 | AI 乱改乱加、堆屎山 | [execution-discipline](prompts/execution-discipline.md) · [convergence-review](prompts/convergence-review.md) · [karpathy-guidelines](prompts/karpathy-guidelines.md) |
 | 代码腐化、长任务失控 | [ai-code-evolution](experience/ai-code-evolution.md) · [module-split-by-change](experience/module-split-by-change.md) · [git-knowledge-loop](experience/git-knowledge-loop.md) |
+| 做完了、不知道怎么继续打磨 | [ai-ux-audit](prompts/ai-ux-audit.md)（AI 产品走查，六维审视 + 审修分流） |
 | 界面丑、没呼吸感 | [design-restraint](prompts/design-restraint.md) · [ai-ui-styling](experience/ai-ui-styling.md) · [perceived-performance](experience/perceived-performance.md) |
 | 上下文爆掉、配置不稳 | [context-management](experience/context-management.md) · [codex-team-and-iteration](experience/codex-team-and-iteration.md) |
 | 想搭完整 AI 工程流水线 | [ai-reliable-engineering](experience/ai-reliable-engineering.md) · [agent-friendly-workflow](experience/agent-friendly-workflow.md)（E2E 环境 + Review）· [codex-skills-trio](experience/codex-skills-trio.md) |
@@ -42,6 +43,7 @@
 
 | 模板 | 用途 |
 |------|------|
+| [ai-ux-audit.md](prompts/ai-ux-audit.md) | AI 产品走查提示词：PM+UX+设计师三位一体，六维度（信息架构/用户流程/操作效率/反馈机制/视觉层级/组件一致性）截图走查，高危交子 Agent 修、其余只出方案。目标是行业顶级，不是"能用就行"。 |
 | [design-restraint.md](prompts/design-restraint.md) | 设计克制三原则：字重对比（标题粗/正文细淡）、极致留白（1.5x）、90% 中性色+10% 单一强调色。治 AI 界面喧闹粗糙。 |
 
 ### 🧠 上下文与工程规范
